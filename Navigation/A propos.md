@@ -6,7 +6,7 @@ layout: layouts/post.ejs
 ## Le projet **MuseumXTD** 
 
 
-##### Le projet-pilote de recherche appliquée **MuseumXTD** (« museum extended ») explore les enjeux de la transition numérique au sein des petits et moyens musées et expérimente de nouvelles méthodologies de travail en associant l'environnement entrepreneurial et de l'innovation vaudois (start-ups, entreprises, Hautes Écoles).
+#### Le projet-pilote de recherche appliquée **MuseumXTD** (« museum extended ») explore les enjeux de la transition numérique au sein des petits et moyens musées et expérimente de nouvelles méthodologies de travail en associant l'environnement entrepreneurial et de l'innovation vaudois (start-ups, entreprises, Hautes Écoles).
 
 Le projet s'appuie notamment sur un cas d'étude qui prend pour exemple la conception d’un dispositif numérique au sein des Musées de Pully dans le cadre de la mise en place d'un espace consacré à C. F. Ramuz et à la littérature, dont l’ouverture est prévue en 2023.
 
@@ -52,7 +52,7 @@ Elena Mata, chargée de communication à la HEIG-VD
 Catering et logistique  
 Cécile Demaurex
 
-###### Plateforme numérique MuseumXTD
+##### Plateforme numérique MuseumXTD
 
 Conception  
 Gaël Paccard
@@ -60,7 +60,7 @@ Gaël Paccard
 Développement technique  
 James Taylor
 
-###### Webapp "Le smartphone de Ramuz"
+##### Webapp "Le smartphone de Ramuz"
 
 Conception  
 Laurent Bolli, d'après le projet développé pendant la semaine Crunch à la HEIG-VD par les étudiant-e-s
