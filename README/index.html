@@ -1,15 +1,50 @@
 <h1 id="museumXTD" tabindex="-1">museumXTD</h1>
+<p>The applied research pilot project <strong>MuseumXTD</strong> (&quot;museum extended&quot;) explores the challenges of the digital transition within small and medium-sized museums.</p>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <ul>
-<li><a href="#adding-new-content-with-markdown-files">Adding new content with MarkDown files</a></li>
-<li><a href="#updating-changes-to-the-live-hosting-server-on-github-pages">Updating changes to the live hosting server on github pages</a></li>
-<li><a href="#configuring-odsidian-to-automatically-push-updates-to-github">Configuring Odsidian to automatically push updates to github</a></li>
+<li><a href="#getting-started">Getting started</a>
+<ul>
+<li><a href="#install-git-for-windows">Install git for windows</a></li>
+<li><a href="#clone-the-museumxtd-project">Clone the museumXTD project</a></li>
+<li><a href="#install-obsidian">Install Obsidian</a></li>
+<li><a href="#configuring-obsidian-to-automatically-sync-with-github-to-pull-latest-changes-and-to-push-new-content">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</a>
+<ul>
+<li><a href="#some-basic-commands">Some basic commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#adding-new-markdown-files">Adding new MarkDown files</a>
+<ul>
+<li><a href="#new-images">New images</a></li>
+</ul>
+</li>
+<li><a href="#without-obsidian">Without Obsidian</a>
+<ul>
 <li><a href="#running-locally">Running locally</a></li>
+<li><a href="#updating-changes-manually-to-the-live-hosting-server-on-github-pages">Updating changes manually to the live hosting server on github pages</a></li>
+</ul>
+</li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<p>The applied research pilot project <strong>MuseumXTD</strong> (&quot;museum extended&quot;) explores the challenges of the digital transition within small and medium-sized museums.</p>
-<h4 id="Adding-new-content-with-MarkDown-files" tabindex="-1">Adding new content with MarkDown files</h4>
+<h2 id="Getting-started" tabindex="-1">Getting started</h2>
+<h3 id="Install-git-for-windows" tabindex="-1">Install git for windows</h3>
+<p>First we need to clone the repository to our local windows machine from GitHub. We do that by installing 'git'. Please go to the <a href="https://gitforwindows.org/">git-for-windows</a> website and follow the simple instructions to install.</p>
+<h3 id="Clone-the-museumXTD-project" tabindex="-1">Clone the museumXTD project</h3>
+<p>Here is the link <em><code>https://github.com/MediaComem/museumXTD.git</code></em> to clone the repo. Simply open a terminal on your windows machine where you want to store the project. For example under the path 'cd C:/Users/enterUserHere/Documents' and run the following command <code>git clone https://github.com/MediaComem/museumXTD.git</code> You will see a new folder called museumXTD which contains all the project files.</p>
+<h3 id="Install-Obsidian" tabindex="-1">Install Obsidian</h3>
+<p>If you wish to view the projects Markdown files and make changes or add new content you can do this via Obsidian. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool. Once done you can select <strong>Open folder as vault</strong> and select the recently cloned project <strong>museumXTD</strong></p>
+<h3 id="Configuring-Obsidian-to-automatically-sync-with-GitHub-to-pull-latest-changes-and-to-push-new-content" tabindex="-1">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</h3>
+<p>Open the settings tab on Obsidian and under <strong>Community plugins</strong> search for and install the plugin <strong>Obsidian Git</strong>. As you cloned the museumXTD project from GitHub, Obsidian Git will automatically see it as a git project giving you access to its native commands to pull or push changes. Please read the guide material to understand the different settings available to you.</p>
+<h4 id="Some-basic-commands" tabindex="-1">Some basic commands</h4>
+<p>Currently one of the menu items on Obsidian is <strong>Open command palette</strong>. Here you can enter the Obsidian Git commands to save changes and upload them to the GitHub repository.</p>
+<ul>
+<li><strong>Pull</strong> This command is automatically triggered when you open the project with Obsidian. However it is good practice to pull from the repository just before you commit any changes in case there are some other recent changes which you are missing.</li>
+<li><strong>commit all changes</strong> This command will add your changes to the git staging area and then perform a commit. There is a standard default message attached to the commit. Usually something like <em>vault backup: YYYY-MM-DD hh:mm:ss</em> However I advise to change this to include your name so your team can track in the logs history who is doing what changes. Under <code>Obsidian settings, Community plugins, Obsidian Git, options</code>, here there is the field <em>Commit message on manual backup/commit</em>. You can enter your custom message here that will appear on every commit thereafter.</li>
+<li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few minutes for the changes to take affect on the live server and you may need to clear cache on your browser if the page is already loaded</li>
+</ul>
+<h2 id="Adding-new-MarkDown-files" tabindex="-1">Adding new MarkDown files</h2>
 <ul>
 <li><strong>title</strong> This property is referenced in the <em><strong>layouts/base.njk</strong></em> HTML to use as the title to the browser tab. If not set it has the default value as <em>MuseumXTD</em></li>
 <li><strong>layout</strong> We add this to have your MD file contained in some HTML/CSS referenced in a njk file. For this project we have the standard HTML/CSS applied with layouts/post.njk</li>
@@ -23,9 +58,13 @@ date: 2022-06-23
 ---
 </code></pre>
 <p>If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
-<h4 id="Updating-changes-to-the-live-hosting-server-on-github-pages" tabindex="-1">Updating changes to the live hosting server on github pages</h4>
-<p>When you push changes to the github branch <strong>test-live</strong> which has the <strong>eleventy_build.yml</strong> file this will trigger a build of the project on github and push the created files to the <strong>docs</strong> folder. Next this folder which will contain the eleventy build, is pushed to the <strong>gh-pages</strong> branch. This branch will automatically update on the live host in a few moments.</p>
-<h4 id="Configuring-Odsidian-to-automatically-push-updates-to-github" tabindex="-1">Configuring Odsidian to automatically push updates to github</h4>
-<p>Open the settings tab and under <em>Community plugins</em> search for and install the plugin <strong>Obsidian Git</strong>. With this plugin you can push your changes on the project to the github repository automatically. Please read the material to understand the different options available to you.</p>
-<h4 id="Running-locally" tabindex="-1">Running locally</h4>
-<p>You can run the project locally by first cloning the project from github, downloading the packages <code>npm ci</code> from the package.json and then running <code>npm run start</code>. This will build the project and serve the updated docs folder on your local host to view on your browser <code>Local: http://localhost:8080</code></p>
+<h3 id="New-images" tabindex="-1">New images</h3>
+<p>All images are to be stored in the root <strong>images</strong> folder. When referencing any image on a MD file please follow this example <code>/images/nameFile.png</code></p>
+<h1 id="Without-Obsidian" tabindex="-1">Without Obsidian</h1>
+<h2 id="Running-locally" tabindex="-1">Running locally</h2>
+<ul>
+<li><strong>install Node</strong> The official <a href="https://nodejs.org/en/download/">Node-website</a> give instructions on how to install node.</li>
+</ul>
+<p>You can run the project locally by first downloading the required packages <code>npm ci</code> from the package-lock.json and then running <code>npm run start</code>. This will build the project files and store them on the docs folder. Next Eleventy will serve this docs folder on your local host to view on your browser <code>Local: http://localhost:8080</code></p>
+<h2 id="Updating-changes-manually-to-the-live-hosting-server-on-github-pages" tabindex="-1">Updating changes manually to the live hosting server on github pages</h2>
+<p>When you have committed your local changes with git and push to the github branch <strong>test-live</strong>, which has the <strong>eleventy_build.yml</strong> file, this will trigger a build of the project on github and push the created files to the <strong>docs</strong> folder. Next this folder, which will contain the Eleventy build, is pushed to the <strong>gh-pages</strong> branch. This branch will automatically update on the live host in a few moments.</p>
