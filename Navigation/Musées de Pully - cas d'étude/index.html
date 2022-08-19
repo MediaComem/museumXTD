@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD - Forum</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -38,10 +49,10 @@
 <p>Les étapes du projet :
 !<a href="/Pasted%20image%2020220620115232.png/">Pasted image 20220620115232.png</a></p>
 <ol>
-<li><a href="/Notes/Case%20study%20-%20questionnement/">Case study - questionnement</a></li>
-<li><a href="/Notes/Case%20study%20-%20d%C3%A9veloppement%20du%20projet/">Case study - développement du projet</a></li>
-<li><a href="/Notes/Case%20study%20-%20Semaine%20Crunch/">Case study - Semaine Crunch</a></li>
-<li><a href="/Notes/Case%20study%20-%20app%20de%20co-cr%C3%A9ation/">Case study - app de co-création</a></li>
+<li><a href="/Case%20study%20-%20questionnement/">Case study - questionnement</a></li>
+<li><a href="/Case%20study%20-%20d%C3%A9veloppement%20du%20projet/">Case study - développement du projet</a></li>
+<li><a href="/Case%20study%20-%20Semaine%20Crunch/">Case study - Semaine Crunch</a></li>
+<li><a href="/Case%20study%20-%20app%20de%20co-cr%C3%A9ation/">Case study - app de co-création</a></li>
 </ol>
 <p>Remarques :</p>
 <ul>
@@ -58,4 +69,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

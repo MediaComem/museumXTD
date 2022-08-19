@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MuseumXTD</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
+
+  </head>
+  <body>
+    <div class="containerTop">
+      <div id="masthead">
+        M u s e u m X T D
+      </div>
+      <!-- topbar Menu -->
+      <div class="navMenu">
+        <a class="menuitem" href='/'>Accueil</a>
+        <!-- <a class="menuitem" href='/Navigation/Guide/'>Numérique & Musée</a> -->
+        <!-- <a class="menuitem" href="/Navigation/Musées de Pully - cas d'étude/">Cas Ramuz</a> -->
+        <a class="menuitem" href='/Navigation/Forum/'>Forum</a>
+        <!-- <a class="menuitem" href='/tables/projects/'>Projects</a> -->
+        <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
+        <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
+      </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
+    </div>
+    <br>
+<br>
+<br>
+<div class='main-container'>
+	<div class='centered'>
+		<div class='column'>
+			<div class='ui basic segment'>
+				<h2 id="Redefinir-les-limites-du-musee-a-l'ere-numerique" tabindex="-1">Redéfinir les limites du musée à l'ère numérique</h2>
+<p>Comment faire lieu à l'ère digitale (matériel opensource remix, RA dans le musée, brèche muséale via expérience immersive. Comment repenser le musée comme centre dans  un éco-système numérique.</p>
+<p><a href="https://www.linkedin.com/in/nicolas-henchoz-32ab902/">Nicolas Henchoz</a><br>
+Fondateur et directeur, <a href="https://epfl-ecal-lab.ch/">EPFL+ECAL Lab</a> (CH)</p>
+<p><a href="https://www.linkedin.com/in/carrard-marie-2264b132/">Marie Carrard</a><br>
+Directrice des expositions et de la programmation, <a href="https://epfl-pavilions.ch/fr">EPFL Pavilions</a> (CH)</p>
+<p><a href="https://museographie.ch/">Stéphane Kläfiger</a>, Muséographe indépendant (CH)</p>
+<p>Modération par <a href="https://isaacpante.net/">Isaac Pante</a>, Président, Dpt. Sciences du Langage et de l'Information<br>
+Faculté des lettres, UNIL (CH)</p>
+<p>Retrouver le live du 12 octobre 2022 <a href="https://www.youtube.com/channel/UCTZJM5WsXDkH8QgMdACUNyw">sur notre chaîne YouTube</a>.</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+    <footer>
+      <div id="mastfeet">
+        M u s e u m X T D
+      </div>
+    </footer>
+  </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
+</html>

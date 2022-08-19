@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -35,7 +46,7 @@
 <p>Si la Suisse termine première du Global Innovation Index 2017, elle est 28e dans une enquête des Nations Unies sur l'administration numérique. L'objectif du Staatslabor est d'aider l’État à devenir plus collaboratif, adaptable et ouvert, afin qu'il puisse mieux servir la collectivité à l’ère du numérique.</p>
 <p>Vous pouvez trouver un document explicatif en français [ici](<a href="https://www.staatslabor.ch/sites/default/files/2018-06/staatsleporello_francais_1.pdf">Explication</a>.
 Le service propose une newsletter.</p>
-<p>Apparaît dans <a href="/Notes/Quelles%20sont%20les%20m%C3%A9thodologies%20de%20travail/">Quelles sont les méthodologies de travail</a>.</p>
+<p>Apparaît dans <a href="/Notes/Quelles%20sont%20les%20m%C3%A9thodologies%20li%C3%A9es%20au%20num%C3%A9rique%20%C3%A0%20conna%C3%AEtre/">Quelles sont les méthodologies liées au numérique à connaître</a>.</p>
 
 			</div>
 		</div>
@@ -47,4 +58,9 @@ Le service propose une newsletter.</p>
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

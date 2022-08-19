@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -32,27 +43,27 @@
 		<div class='column'>
 			<div class='ui basic segment'>
 				<h1 id="Qu'est-ce-que-la-mediation-numerique" tabindex="-1">Qu'est-ce que la médiation numérique ?</h1>
-<p>court paragraphe sur l'intérêt de la question</p>
-<ul>
+<p>La médiation numérique est appelée ainsi si la médiation culturelle implique l'utilisation de technologies numériques. Si l'impact de celle-ci peut différer d'une médiation traditionnelle (voir <a href="/Notes/Quelles%20technologies%20pour%20quel%20impact/">Quelles technologies pour quel impact</a>), il s'avère que la médiation numérique n'est pas toujours le dispositif autonome tel que l'on s'imagine.</p>
+<ol>
 <li>
-<p><a href="/Notes/Usages%20et%20pratiques%20num%C3%A9riques%20mus%C3%A9ales%20et%20patrimoniales%20en%20Nouvelle-Aquitaine/">Usages et pratiques numériques muséales et patrimoniales en Nouvelle-Aquitaine</a></p>
+<p><a href="/Notes/MuseumXTD%20-%20Antoine%20Roland/">MuseumXTD - Antoine Roland</a></p>
 </li>
 <li>
-<p><a href="/Num%C3%A9rique%20et%20culture,%20la%20qu%C3%AAte%20de%20l%E2%80%99indispensable%20compl%C3%A9mentarit%C3%A9./">Numérique et culture, la quête de l’indispensable complémentarité.</a></p>
+<p><a href="/Notes/Num%C3%A9rique%20et%20culture,%20la%20qu%C3%AAte%20de%20l%E2%80%99indispensable%20compl%C3%A9mentarit%C3%A9/">Numérique et culture, la quête de l’indispensable complémentarité</a></p>
+<ul>
+<li>Magalie Vernet, Directrice de la Communication, du Développement et de l'Événementiel au Louvre-Lens, définit la médiation culturelle et le nouveau lien au public associé à l'émergence des nouvelles technologies. De plus selon elle, la médiation humaine et numérique ne sont pas rivales.</li>
+</ul>
 </li>
 <li>
 <p><a href="/Notes/Does%20Digital%20Mediation%20Really%20Change%20the%20Museum%20Experience.%20Museomix%20in%20the%20Lyon-Fourvi%C3%A8re%20Archaeological%20Museum/">Does Digital Mediation Really Change the Museum Experience. Museomix in the Lyon-Fourvière Archaeological Museum</a></p>
 <ul>
-<li>définition de la médiation muséale</li>
-<li>ne travaille pas avec une typologie de dispositifs numériques mais bien une typologie d'interaction</li>
+<li>Les auteurs définissent la médiation comme l'ensemble des outils et techniques utilisés par les musées pour enrichir la rencontre entre l'objet et le public. Celle-ci peut utiliser des technologies numériques aux formes multiples, ce qui rend une typologie de ces dispositifs complexe. Les auteurs travaillent d'ailleurs selon les types d'interaction avec les visiteurs et non selon les types de dispositifs.</li>
 </ul>
 </li>
-</ul>
-<p>engagement du visiteur - pas toujours du top-down mais équilibre entre top-down et bottom-up
-enrichir de l'expérience visiteur</p>
-<p>Video - J1:</p>
-<p>Antoine Roland: Comment rendre son musée numérique ? Approche institutionnelle, approche en réseau, approche de co-construction</p>
-<p>Elisabeth Gravil: Définition de la transformation numérique pour les musées</p>
+<li>
+<p><a href="/Notes/Usages%20et%20pratiques%20num%C3%A9riques%20mus%C3%A9ales%20et%20patrimoniales%20en%20Nouvelle-Aquitaine/">Usages et pratiques numériques muséales et patrimoniales en Nouvelle-Aquitaine</a></p>
+</li>
+</ol>
 
 			</div>
 		</div>
@@ -64,4 +75,9 @@ enrichir de l'expérience visiteur</p>
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

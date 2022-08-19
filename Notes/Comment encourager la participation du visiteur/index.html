@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -34,11 +45,12 @@
 				<h1 id="Comment-encourager-la-participation-du-visiteur" tabindex="-1">Comment encourager la participation du visiteur ?</h1>
 <p>court paragraphe sur l'intérêt de la question</p>
 <ol>
-<li>Ressources
+<li><a href="/Notes/Num%C3%A9rique%20et%20culture,%20la%20qu%C3%AAte%20de%20l%E2%80%99indispensable%20compl%C3%A9mentarit%C3%A9/">Numérique et culture, la quête de l’indispensable complémentarité</a>
 <ul>
-<li>explication sur l'intérêt de la ressource</li>
+<li>Selon Emmanuel Vergès, on assiste à une individualisation des pratiques culturelles, renforcée par la période de confinement. Dans un contexte où les espaces privés sont devenus, entre autres, des espaces de consommation et de production, les politiques culturelles vont devoir prendre en compte ces pratiques culturelles à domicile et la culture de contribution.</li>
 </ul>
 </li>
+<li><a href="/Notes/Usages%20et%20pratiques%20num%C3%A9riques%20mus%C3%A9ales%20et%20patrimoniales%20en%20Nouvelle-Aquitaine/">Usages et pratiques numériques muséales et patrimoniales en Nouvelle-Aquitaine</a></li>
 </ol>
 <p>Video J1:</p>
 <p>Antoine Roland: Comment rendre son musée numérique ? Approche institutionnelle, approche en réseau, approche de co-construction</p>
@@ -53,4 +65,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

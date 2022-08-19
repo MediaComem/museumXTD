@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -39,7 +50,7 @@
 <li><a href="https://loeildupublic.com/wp-content/uploads/2021/07/Les-Institutions-Culturelles-en-temps-de-Covid-Juin-2021-_FR.pdf">Les institutions culturelles en temps de covid-19, juin 2021</a></li>
 </ul>
 <p>L'agence L'Oeil du Public est une agence d'enquêtes auprès des publics de la culture. Elle est situé en France et a une antenne en Suisse depuis 2018 gérée par Fabien Morf.</p>
-<p>Apparaît dans <a href="/Quel%20est%20l'impact%20du%20covid%20sur%20la%20digitalisation%20des%20mus%C3%A9es?/">Quel est l'impact du covid sur la digitalisation des musées?</a>.</p>
+<p>Apparaît dans <a href="/Notes/Quel%20est%20l'impact%20du%20COVID-19%20sur%20la%20num%C3%A9risation%20des%20mus%C3%A9es/">Quel est l'impact du COVID-19 sur la numérisation des musées</a>.</p>
 
 			</div>
 		</div>
@@ -51,4 +62,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

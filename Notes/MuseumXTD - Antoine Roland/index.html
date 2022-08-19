@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -31,12 +42,11 @@
 	<div class='centered'>
 		<div class='column'>
 			<div class='ui basic segment'>
-				<p>Antoine Roland - Comment rendre son musée numérique ? Approche institutionnelle, approche en réseau, approche de co-construction</p>
-<p><strong>Antoine Roland</strong>, emploi, Correspondances Digitales</p>
-<p><em>Abstract</em>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p><em>Vidéo YouTube</em></p>
-<p>Mais alternative -&gt; lien direct sur YouTube</p>
+				<h2 id="Comment-rendre-son-musee-numerique-Approche-institutionnelle-approche-en-reseau-approche-de-co-construction" tabindex="-1">Comment rendre son musée numérique ? Approche institutionnelle, approche en réseau, approche de co-construction</h2>
+<p><a href="https://www.linkedin.com/in/antoine-roland?originalSubdomain=fr">Antoine Roland</a><br>
+Directeur, {CORRESPONDANCES DIGITALES] <a href="https://correspondances.co/">lien ici</a> (FR)</p>
+<p>Cette intervention évoquera la pertinence d’intégrer une réflexion sur le numérique à un projet d’établissement. Cela sera l’occasion de revenir sur la façon dont celui-ci peut contribuer à la notoriété d’un établissement, à la valorisation de ses collections ou au renforcement des liens avec ses publics. Il peut aussi favoriser l’engagement de nouveaux projets en lien avec son territoire.</p>
+<p>Retrouver le live du 12 octobre 2022 <a href="https://www.youtube.com/channel/UCTZJM5WsXDkH8QgMdACUNyw">sur notre chaîne YouTube</a>.</p>
 
 			</div>
 		</div>
@@ -48,4 +58,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

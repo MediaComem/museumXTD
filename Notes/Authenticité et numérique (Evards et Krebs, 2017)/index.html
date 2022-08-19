@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MuseumXTD</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
+
+  </head>
+  <body>
+    <div class="containerTop">
+      <div id="masthead">
+        M u s e u m X T D
+      </div>
+      <!-- topbar Menu -->
+      <div class="navMenu">
+        <a class="menuitem" href='/'>Accueil</a>
+        <!-- <a class="menuitem" href='/Navigation/Guide/'>Numérique & Musée</a> -->
+        <!-- <a class="menuitem" href="/Navigation/Musées de Pully - cas d'étude/">Cas Ramuz</a> -->
+        <a class="menuitem" href='/Navigation/Forum/'>Forum</a>
+        <!-- <a class="menuitem" href='/tables/projects/'>Projects</a> -->
+        <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
+        <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
+      </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
+    </div>
+    <br>
+<br>
+<br>
+<div class='main-container'>
+	<div class='centered'>
+		<div class='column'>
+			<div class='ui basic segment'>
+				<p><a href="https://www.researchgate.net/publication/320133421_The_authenticity_of_the_museum_experience_in_the_digital_age_the_case_of_the_Louvre/link/5f71d7a892851c14bc9b1684/download">Evrard, Y., &amp; Krebs, A. (2017, Septembre). The authenticity of the museum experience in the digital age: the case of the Louvre. Journal of Cultural Economics.</a></p>
+<p>Dans leur étude, Evrard et Krebs développent une échelle à trois dimensions afin d’évaluer l’impact du numérique sur l’authenticité du contenu muséal :</p>
+<ul>
+<li><strong>Authenticité de l’expérience</strong> : le réel ne peut être remplacé par le virtuel</li>
+<li><strong>Substituabilité</strong> : la reproduction numérique peut remplacer l’œuvre physique</li>
+<li><strong>Complémentarité</strong> : le réel et virtuel sont indépendants et coexistent parce que leur valeur ajoutée est différente</li>
+</ul>
+<p>L'objet de l'étude se porte sur la différence d'expérience entre les visites réelles (face aux collections dans le musée) et virtuelles (face à leur reproduction sur le site internet du musée) pour un panel de visiteurs du Louvre.</p>
+<p><a href="/Notes/Does%20Digital%20Mediation%20Really%20Change%20the%20Museum%20Experience.%20Museomix%20in%20the%20Lyon-Fourvi%C3%A8re%20Archaeological%20Museum/">Roederer, Revat et Pallud (2020)</a> reprennent cette échelle pour qualifier l’impact des dispositifs numériques de médiation sur les objets et étudient si ces dispositifs sont substituables, complémentaires ou s’ils interagissent directement avec les objets et modifient leur authenticité. Tandis qu’Evrard et Krebs évaluent dans quelle mesure et pour quel type de public les objets physiques peuvent être remplacées ou non par leurs reproductions numériques via le site internet, Roederer, Revat et Pallud évaluent l’impact des médiations numériques dans une exposition sur l’expérience de visite in situ</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+    <footer>
+      <div id="mastfeet">
+        M u s e u m X T D
+      </div>
+    </footer>
+  </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
+</html>

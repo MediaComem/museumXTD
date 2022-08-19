@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -34,10 +45,12 @@
 				<p>Qu'est-ce qui est entrepris à l'international pour accompagner les petits et moyens musées dans leur transition numérique ?
 Liste non-exhaustive de projets à l'international.</p>
 <ul>
-<li>DOORS (Ars Electronica), Allemagne</li>
+<li>DOORS de Ars Electronica (Allemagne)</li>
 <li>Digitorials, Suisse</li>
 <li>Virage NumériCQ (Quebec)</li>
-<li>One-by-One, UK</li>
+<li>[Digital Kultur](<a href="https://kreativ.mfg.de/digitale-kultur/">Culture numérique (mfg.de)</a>) de Kreative (Allemagne)</li>
+<li><a href="/Notes/Culture24/">Culture24</a> - <a href="https://www.culture24.org.uk/lets-get-real/">Let's Get Real</a> (UK)</li>
+<li>One-by-One (UK)</li>
 </ul>
 
 			</div>
@@ -50,4 +63,9 @@ Liste non-exhaustive de projets à l'international.</p>
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

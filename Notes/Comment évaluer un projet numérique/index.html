@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -33,15 +44,10 @@
 			<div class='ui basic segment'>
 				<h1 id="Comment-evaluer-un-projet-numerique" tabindex="-1">Comment évaluer un projet numérique ?</h1>
 <p>court paragraphe sur l'intérêt de la question</p>
-<ol>
-<li>
 <ul>
-<li>explication sur l'intérêt de la ressource</li>
+<li><a href="/Notes/Rapports%20NEMO/">Rapports NEMO</a> -&gt; Rapport 2021 - Recommandations</li>
+<li>&quot;Comprehensive digital transition should include addressing the development of sound metrics, frameworks and methods to track digital activities and success, which a large part of the museums claims to struggle with or do not apply within a comprehensive strategy or framework. Improving museums’ digital offers will require a comprehensive evaluation strategy.&quot; - à inclure dans <a href="/Notes/Comment%20%C3%A9valuer%20un%20projet%20num%C3%A9rique/">Comment évaluer un projet numérique</a> ?</li>
 </ul>
-</li>
-</ol>
-<p>Video - J1:</p>
-<p>Nicolas Henchoz: Evaluation des projets numériques</p>
 
 			</div>
 		</div>
@@ -53,4 +59,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

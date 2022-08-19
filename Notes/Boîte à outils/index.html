@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -33,37 +44,32 @@
 			<div class='ui basic segment'>
 				<h1 id="Boite-a-outils" tabindex="-1">Boîte à outils</h1>
 <p>Cette section liste une sélection d'outils pour chaque type d'activité du musée, facilement accessibles et <em>peu coûteux</em>.</p>
-<h2 id="Constituer-une-collection-numerique" tabindex="-1"><a href="#GuideConstituer-une-collection-numerique">Constituer une collection numérique</a></h2>
+<h2 id="Numeriser-ses-collections" tabindex="-1"><a href="#Numerique-et-museeGerer-les-collections">Numériser ses collections</a></h2>
 <ul>
 <li>outil 1</li>
 <li>outil 2</li>
 </ul>
-<h2 id="Collecter-les-objets-et-les-savoirs" tabindex="-1"><a href="#GuideCollecter-les-objets-et-les-savoirs">Collecter les objets et les savoirs</a></h2>
+<h2 id="Collecter-les-objets-et-les-savoirs" tabindex="-1"><a href="#Numerique-et-museeGerer-les-collections">Collecter les objets et les savoirs</a></h2>
 <ul>
 <li>outil 1</li>
 <li>outil 2</li>
 </ul>
-<h2 id="Diriger-le-musee" tabindex="-1"><a href="#GuideDiriger-le-musee">Diriger le musée</a></h2>
+<h2 id="Administrer-son-musee" tabindex="-1"><a href="#Numerique-et-museeAdministrer-son-musee">Administrer son musée</a></h2>
 <ul>
 <li>outil 1</li>
 <li>outil 2</li>
 </ul>
-<h2 id="Diriger-des-projets" tabindex="-1"><a href="#GuideDiriger-des-projets">Diriger des projets</a></h2>
+<h2 id="Travailler-avec-le-numerique" tabindex="-1"><a href="#Numerique-et-museeTravailler-avec-le-numerique">Travailler avec le numérique</a></h2>
 <ul>
 <li>outil 1</li>
 <li>outil 2</li>
 </ul>
-<h2 id="Transmettre-aux-visiteurs" tabindex="-1"><a href="#GuideTransmettre-aux-visiteurs">Transmettre aux visiteurs</a></h2>
+<h2 id="Transmettre-aux-visiteurs" tabindex="-1"><a href="#Numerique-et-museeConcevoir-l'experience-visiteur">Transmettre aux visiteurs</a></h2>
 <ul>
 <li>outil 1</li>
 <li>outil 2</li>
 </ul>
-<h2 id="Le-visiteur-a-l'oeuvre" tabindex="-1"><a href="#GuideLe-visiteur-a-l'oeuvre">Le visiteur à l'œuvre</a></h2>
-<ul>
-<li>outil 1</li>
-<li>outil 2</li>
-</ul>
-<h2 id="GuideAutres-ex-risques" tabindex="-1"><a href="#GuideAutres-ex-risques">Guide#Autres ex risques</a></h2>
+<h2 id="Encourager-la-participation-des-publics" tabindex="-1"><a href="#Numerique-et-museeConcevoir-l'experience-visiteur">Encourager la participation des publics</a></h2>
 <ul>
 <li>outil 1</li>
 <li>outil 2</li>
@@ -79,4 +85,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

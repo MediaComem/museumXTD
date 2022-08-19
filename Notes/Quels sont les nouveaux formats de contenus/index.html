@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -34,10 +45,18 @@
 				<h1 id="Quels-sont-les-nouveaux-formats-de-contenus" tabindex="-1">Quels sont les nouveaux formats de contenus ?</h1>
 <p>court paragraphe sur l'intérêt de la question</p>
 <ol>
-<li>Ressources
+<li>Plateformes en lignes de contenus
+<ol>
+<li><a href="/Notes/Culturecheznous.gouv.fr/">Culturecheznous.gouv.fr</a></li>
+<li>
 <ul>
-<li>explication sur l'intérêt de la ressource</li>
+<li>Louvre +</li>
 </ul>
+</li>
+<li>Art Explora Academy</li>
+<li>Culture At Home (Culturespace)</li>
+<li>Google Arts &amp; Culture</li>
+</ol>
 </li>
 </ol>
 
@@ -51,4 +70,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

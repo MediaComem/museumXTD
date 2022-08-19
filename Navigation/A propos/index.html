@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -39,18 +50,21 @@
 <p>Contact<br>
 <a href="mailto:info@museumxtd.ch">info@museumxtd.ch</a></p>
 <p><strong>MuseumXTD</strong> est mené par la société Concilio, les Musées de Pully et la HEIG-VD. IL s'achève le 31 octobre 2022.<br>
-En tant que projet de transformation, il bénéficie du soutien du Service des Affaires culturelles du Canton de Vaud ainsi que de celui de l’Office fédéral de la culture.
-<img src="/images/Logo_SERACetOFC.png" alt=""></p>
+En tant que projet de transformation, il bénéficie du soutien du Service des Affaires culturelles du Canton de Vaud ainsi que de celui de l’Office fédéral de la culture.</p>
+<p><img src="/images/Logo-Canton_de_Vaud.svg" alt="">   <img src="/images/EDI_BAK_FR_RGB_POS_HOCH.png" alt=""></p>
+<hr>
 <h2 id="Partenaires-du-projet" tabindex="-1">Partenaires du projet</h2>
 <h3 id="Concilio-Sarl" tabindex="-1"><a href="https://concilioltd.com/">Concilio Sàrl</a></h3>
-<p><img src="/images/Concilio-logo.jpg" alt=""></p>
+<p><img src="/images/Logo-Concilio.svg" alt=""></p>
 <p><strong>Direction du projet, coordination &amp; recherche documentaire</strong><br>
 Nathalie Pichard, directrice<br>
 Marion Lehembre, cheffe de projet adjointe</p>
 <p><strong>Communication digitale</strong><br>
 Julie Ansermet , consultante</p>
 <h3 id="Musees-de-Pully" tabindex="-1"><a href="https://www.museedartdepully.ch/fr/accueil/">Musées de Pully</a></h3>
-<p><img src="/images/MDAxArcheolabxMDP-min.png" alt=""></p>
+<p><img src="/images/Logo-Musees_de_Pully.png" alt="">  
+<img src="/images/Logo-Musee_d-art_de_Pully.svg" alt="">  
+<img src="/images/Logo-Archeolab.png" alt=""></p>
 <p><strong>Direction et coordination du cas d’étude Musées de Pully</strong><br>
 Delphine Rivier, directrice des Musées de Pully</p>
 <p>Stéphanie Lugon, conservatrice du projet muséal La Muette</p>
@@ -147,4 +161,9 @@ Cécile Demaurex</p>
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -34,7 +45,7 @@
 				<p><em>1er paragraphe introductif -&gt; qu'allez-vous trouver sur cette plateforme ?</em>
 Bienvenue sur MuseumXTD (à prononcer &quot;extended&quot; !).</p>
 <p>Comment naviguer sur cette plateforme
-<a href="/Notes/En%20savoir%20plus%20sur%20la%20plateforme/">En savoir plus sur la plateforme</a></p>
+<a href="/En%20savoir%20plus%20sur%20la%20plateforme/">En savoir plus sur la plateforme</a></p>
 <p>Cette plateforme est le le résultat du projet <strong>MuseumXTD</strong> mené par la société Concilio, les Musées de Pully et la HEIG-VD. Il bénéficie du soutien du Service des Affaires culturelles du Canton de Vaud ainsi que de celui de l’Office fédéral de la culture (projet de transformation). Il s'achève le 31 octobre 2022.
 🌈 <a href="/Navigation/A%20propos/">En savoir plus</a></p>
 <hr>
@@ -43,11 +54,11 @@ Bienvenue sur MuseumXTD (à prononcer &quot;extended&quot; !).</p>
 <p><a href="/Navigation/Mus%C3%A9es%20de%20Pully%20-%20cas%20d'%C3%A9tude/">Lire le cas d'étude</a></p>
 <h2 id="Outils-et-ressources" tabindex="-1">Outils et ressources</h2>
 <p>Nous avons compilé et sélectionné des liens qui mettent en lumière à la fois les réalités et enjeux du numérique pour les petits et moyens musées. Ces ressources vous permettront de vous approprier le sujet et de vous positionner face aux discours, mythes et injonctions qui viennent de l'extérieur de l'institution muséale.</p>
-<p><a href="/Notes/Parler%20du%20num%C3%A9rique,%20qu'est-ce%20que%20c'est/">Parler du numérique, qu'est-ce que c'est ?</a></p>
+<p><a href="/Parler%20du%20num%C3%A9rique,%20qu'est-ce%20que%20c'est/">Parler du numérique, qu'est-ce que c'est ?</a></p>
 <p><a href="/Notes/Qu'est-ce%20qu'une%20strat%C3%A9gie%20num%C3%A9rique/">Qu'est-ce qu'une stratégie numérique (pour un musée) ?</a></p>
 <p><a href="/Notes/Pourquoi%20d%C3%A9velopper%20une%20strat%C3%A9gie%20num%C3%A9rique/">Pourquoi développer une stratégie numérique dans les musées ?</a></p>
-<p><a href="/Notes/Quel%20est%20l'impact%20du%20covid%20sur%20la%20digitalisation%20des%20mus%C3%A9es/">Quel est l'impact du covid sur la digitalisation des musées ?</a></p>
-<p><a href="/Notes/Quelles%20sont%20les%20m%C3%A9thodologies%20de%20travail/">Qu'est-ce que l'innovation culturelle ?</a></p>
+<p><a href="/Quel%20est%20l'impact%20du%20covid%20sur%20la%20digitalisation%20des%20mus%C3%A9es/">Quel est l'impact du covid sur la digitalisation des musées ?</a></p>
+<p><a href="/Quelles%20sont%20les%20m%C3%A9thodologies%20de%20travail/">Qu'est-ce que l'innovation culturelle ?</a></p>
 <p><strong><a href="/Navigation/Guide/">Parcourir toutes les ressources</a></strong></p>
 
 			</div>
@@ -60,4 +71,9 @@ Bienvenue sur MuseumXTD (à prononcer &quot;extended&quot; !).</p>
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

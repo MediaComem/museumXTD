@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -31,11 +42,52 @@
 	<div class='centered'>
 		<div class='column'>
 			<div class='ui basic segment'>
-				<h1 id="Quelles-technologies-pour-quel-impact" tabindex="-1">Quelles technologies pour quel impact?</h1>
-<p>trier les technologies selon les tendances</p>
-<p>Video - Forum J1:</p>
-<p>Giovanni Calavezza: Démystifier la transition numérique</p>
-<p>Olivier Ross: : Technothérapie</p>
+				<h1 id="Quelles-technologies-pour-quels-impacts" tabindex="-1">Quelles technologies pour quels impacts?</h1>
+<p><strong>Les technologies numériques sont des objets parfois aussi flous que variés. Afin de mieux cerner leur usage dans le secteur muséal, nous vous proposons une liste de ressources qui confrontent diverses technologies à leur utilisation selon les départements des musées voire selon leur interaction avec le visiteur.</strong></p>
+<h2 id="Utilisation-selon-les-departements-des-musees" tabindex="-1">Utilisation selon les <strong>départements des musées</strong></h2>
+<ol>
+<li><a href="/Notes/Museum%20Innovation%20Barometer%202021/">Museum Innovation Barometer 2021</a>
+<ul>
+<li>L'agence Museum Booster présente les résultats de son sondage sur l'utilisation du numérique dans les musées. Elle analyse à la fois les raisons générales d'utiliser les nouvelles technologies en 2020 (page 14) ainsi que les technologies les plus utilisées selon les département (expositions, médiation, communication etc.).</li>
+</ul>
+</li>
+<li><a href="/Notes/The%20impact%20of%20digital%20technology%20on%20arts%20culture%20in%20the%20UK/">The impact of digital technology on arts culture in the UK</a>
+<ul>
+<li>Cette POSTNote pour le parlement britannique définit et classe selon leur usage les technologies émergeantes pertinentes pour le secteur des industries culturelles et créatives (dont les technologies XR, blockchain, NFTs ou services de streaming).</li>
+</ul>
+</li>
+</ol>
+<h2 id="Utilisation-selon-les-interactions-avec-les-visiteurs" tabindex="-1">Utilisation selon les interactions avec les visiteurs</h2>
+<ol start="3">
+<li><a href="/Notes/Does%20Digital%20Mediation%20Really%20Change%20the%20Museum%20Experience.%20Museomix%20in%20the%20Lyon-Fourvi%C3%A8re%20Archaeological%20Museum/">Does Digital Mediation Really Change the Museum Experience. Museomix in the Lyon-Fourvière Archaeological Museum</a>
+<ul>
+<li>Cet article étudie l'impact des dispositifs de médiation numérique sur l'expérience muséale des visiteurs lors d'une exposition au musée archéologique de Lyon-Fourvière.</li>
+</ul>
+</li>
+<li><a href="/Notes/Authenticit%C3%A9%20et%20num%C3%A9rique%20(Evards%20et%20Krebs,%202017)/">Authenticité et numérique (Evards et Krebs, 2017)</a>
+<ul>
+<li>Les auteurs analysent et comparent les comportements de visiteurs en ligne (à travers le site internet) avec ceux de visiteurs sur place au musée du Louvre.</li>
+</ul>
+</li>
+<li><a href="/Notes/The%20adoption%20of%20digital%20technology%20in%20the%20arts/">The adoption of digital technology in the arts</a>
+<ul>
+<li>Le rapport (p11) distingue les technologies &quot;facilitatrices&quot;, qui permettent aux organisations artistiques d'optimiser les façons de faire (plus simplement, plus rapidement ou d'une nouvelle manière) et les technologies &quot;motrices&quot;, qui remplacent entièrement les façons établies de faire les choses ou changent les comportements et attentes des utilisateurs finaux.</li>
+</ul>
+</li>
+<li><a href="/Notes/Journ%C3%A9e%20de%20recherche-action%20%C2%AB%20institutions%20patrimoniales%20et%20mus%C3%A9ales%20et%20dispositifs%20immersifs%20%C2%BB./">Journée de recherche-action « institutions patrimoniales et muséales et dispositifs immersifs ».</a>
+<ul>
+<li>Cette journée se concentre sur les applications technologies immersives ou &quot;XR&quot; : les attentes des publics dans et hors le musée face à ces technologies et le rôle du musée et son équipe dans les projets XR.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Utilisation-selon-un-type-de-technologies" tabindex="-1">Utilisation selon un type de technologies</h2>
+<ol start="4">
+<li><a href="/Notes/Journ%C3%A9e%20de%20recherche-action%20%C2%AB%20institutions%20patrimoniales%20et%20mus%C3%A9ales%20et%20dispositifs%20immersifs%20%C2%BB./">Journée de recherche-action « institutions patrimoniales et muséales et dispositifs immersifs ».</a>
+<ul>
+<li>Cette journée aborde les enjeux de la création en XR au sein des institutions muséales et patrimoniales en questionnant les rapports aux publics, les collaborations entre concepteurs, artistes et institutions, etc.</li>
+</ul>
+</li>
+</ol>
 
 			</div>
 		</div>
@@ -47,4 +99,9 @@
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>

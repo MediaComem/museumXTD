@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MuseumXTD</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
 
   </head>
   <body>
@@ -23,6 +25,15 @@
         <!-- <a class="menuitem" href='/tables/acteurs/'>Acteurs & Projets</a> -->
         <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
       </div>
+      <div id="search">
+          <input type="search" id="searchString" placeholder="Veuillez entrer plus de trois lettres"> <button onclick="search()">Chercher</button>
+          <div id="results" class="hidden">
+            <h3>Résultats</h3>
+            <ul id="resultList">
+            </ul>
+          </div>
+          <p id="noResults" class="hidden"> Désolé, aucun résultat n'a été trouvé. </p>
+        </div>
     </div>
     <br>
 <br>
@@ -50,7 +61,7 @@
 <p>Modération de la journée par <a href="https://www.linkedin.com/in/zelda-chauvet-6b392723/">Zelda Chauvet</a>, Journaliste &amp; Productrice, <a href="https://lasourisverte.ch/">La Souris Verte</a> (CH)</p>
 <ul>
 <li>
-<h4 id="Introduction" tabindex="-1"><a href="/MuseumXTD%20-%20Introduction/">Introduction</a></h4>
+<h4 id="Introduction" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Introduction/">Introduction</a></h4>
 </li>
 <li><em>9h00-9h20</em></li>
 </ul>
@@ -62,7 +73,7 @@ Directeur de projet, <a href="https://heig-vd.ch/rad/instituts/mei/">Media Engin
 Directrice, <a href="https://www.concilioltd.com/">Concilio Sàrl</a> (CH)</p>
 <ul>
 <li>
-<h4 id="Transformation-numerique-des-musees-:-vers-une-organisation-phygitale" tabindex="-1"><a href="/MuseumXTD%20-%20Elisabeth%20Gravil/">Transformation numérique des musées : vers une organisation phygitale ?</a></h4>
+<h4 id="Transformation-numerique-des-musees-:-vers-une-organisation-phygitale" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Elisabeth%20Gravil/">Transformation numérique des musées : vers une organisation phygitale ?</a></h4>
 </li>
 <li><em>9h20-9h40</em></li>
 </ul>
@@ -70,7 +81,7 @@ Directrice, <a href="https://www.concilioltd.com/">Concilio Sàrl</a> (CH)</p>
 Dirigeante de <a href="https://museovation.co/">Museovation</a> – Conseil en Stratégie Numérique des Institutions Culturelles (FR)</p>
 <ul>
 <li>
-<h4 id="Quelles-approches-du-numerique-pour-un-musee-en-Suisse" tabindex="-1"><a href="/MuseumXTD%20-%20Quelles%20approches%20du%20num%C3%A9rique%20pour%20un%20mus%C3%A9e%20en%20Suisse/">Quelles approches du numérique pour un musée en Suisse ?</a></h4>
+<h4 id="Quelles-approches-du-numerique-pour-un-musee-en-Suisse" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Quelles%20approches%20du%20num%C3%A9rique%20pour%20un%20mus%C3%A9e%20en%20Suisse/">Quelles approches du numérique pour un musée en Suisse ?</a></h4>
 </li>
 <li><em>9h40-10h10</em></li>
 </ul>
@@ -94,7 +105,7 @@ Conservatrice en chef, <a href="https://www.nationalmuseum.ch/fr">Musée nationa
 Directeur, {CORRESPONDANCES DIGITALES] <a href="https://correspondances.co/">lien ici</a> (FR)</p>
 <ul>
 <li>
-<h4 id="Les-donnees-visiteurs-:-un-outil-au-service-d'une-meilleure-connaissance-de-vos-publics" tabindex="-1"><a href="/MuseumXTD%20-%20Les%20donn%C3%A9es%20visiteurs,%20un%20outil%20au%20service%20d'une%20meilleure%20connaissance%20de%20vos%20publics/">Les données visiteurs : un outil au service d'une meilleure connaissance de vos publics</a></h4>
+<h4 id="Les-donnees-visiteurs-:-un-outil-au-service-d'une-meilleure-connaissance-de-vos-publics" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Les%20donn%C3%A9es%20visiteurs,%20un%20outil%20au%20service%20d'une%20meilleure%20connaissance%20de%20vos%20publics/">Les données visiteurs : un outil au service d'une meilleure connaissance de vos publics</a></h4>
 </li>
 <li><em>11h05-11h25</em></li>
 </ul>
@@ -104,29 +115,29 @@ Fondateur et directeur, <a href="https://loeildupublic.com/">L'Œil du Public Su
 Directrice du développement international, <a href="https://arenametrix.com/">Arenametrix</a> (FR)</p>
 <ul>
 <li>
-<h4 id="Le-musee-numerique-en-toute-legalite:-quelles-questions-se-poser" tabindex="-1"><a href="/MuseumXTD%20-%20Tatiana%20Julliez/">Le musée numérique en toute légalité: quelles questions se poser ?</a></h4>
+<h4 id="Le-musee-numerique-en-toute-legalite:-quelles-questions-se-poser" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Tatiana%20Julliez/">Le musée numérique en toute légalité: quelles questions se poser ?</a></h4>
 </li>
 <li><em>11h25-11h45</em></li>
 </ul>
 <p><a href="https://www.linkedin.com/in/tatiana-jullier-53918b209/?originalSubdomain=ch">Tatiana Julliez</a><br>
 Avocate, <a href="https://www.lalive.law/">Lalive</a> (CH)</p>
-<h4 id="DOORS:-Digital-Incubator-for-Museums-(online)" tabindex="-1"><a href="/MuseumXTD%20-%20Le%20projet%20DOORS/">DOORS: Digital Incubator for Museums</a> (online)</h4>
+<h4 id="DOORS:-Digital-Incubator-for-Museums-(online)" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Le%20projet%20DOORS/">DOORS: Digital Incubator for Museums</a> (online)</h4>
 <p><em>11h45-12h05</em></p>
 <p>Equipe <a href="https://ars.electronica.art/doors/en/">Doors</a>, Ars Electronica (AT)</p>
 <h4 id="Pause-1" tabindex="-1"><em>Pause</em></h4>
-<h4 id="La-face-cachee-du-numerique" tabindex="-1"><a href="/MuseumXTD%20-%20Hub01/">La face cachée du numérique</a></h4>
+<h4 id="La-face-cachee-du-numerique" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Hub01/">La face cachée du numérique</a></h4>
 <p><em>13h40-14h00</em></p>
 <p><a href="https://www.linkedin.com/in/leonie-alain-23202571/">Léonie Alain</a><br>
 Directrice des communications,  <a href="https://www.hub01.org/">0/1 Hub numérique</a> (CA)</p>
 <p><a href="https://ca.linkedin.com/in/olivier-ross-b6009854">Olivier Ross</a><br>
 Directeur des opérations, <a href="">0/1 - Hub numérique</a> (CA)</p>
-<h4 id="Seemuseum:-Exploring-digital-change-as-a-small-museum" tabindex="-1"><a href="/MuseumXTD%20-%20Seemuseum%20Kreuzlingen/">Seemuseum: Exploring digital change as a small museum</a></h4>
+<h4 id="Seemuseum:-Exploring-digital-change-as-a-small-museum" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Seemuseum%20Kreuzlingen/">Seemuseum: Exploring digital change as a small museum</a></h4>
 <p><em>14h00-14h20</em></p>
 <p><a href="https://www.linkedin.com/in/hunzikerchristian/?originalSubdomain=ch">Christian Hunziker</a>
 Directeur,  <a href="https://seemuseum.ch/">Seemuseum Kreuzlingen</a> (CH)</p>
 <p><a href="https://seemuseum.ch/Museum#Team">Julian Fitze</a>
 Responsable Education et médiation, <a href="https://seemuseum.ch/">Seemuseum Kreuzlingen</a> (CH)</p>
-<h4 id="Studios-et-agences-partenaires-de-la-transition-numerique-des-musees" tabindex="-1"><a href="/MuseumXTD%20-%20Studios%20et%20agences,%20partenaires%20de%20la%20transition%20num%C3%A9rique%20des%20mus%C3%A9es/">Studios et agences, partenaires de la transition numérique des musées</a></h4>
+<h4 id="Studios-et-agences-partenaires-de-la-transition-numerique-des-musees" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Studios%20et%20agences,%20partenaires%20de%20la%20transition%20num%C3%A9rique%20des%20mus%C3%A9es/">Studios et agences, partenaires de la transition numérique des musées</a></h4>
 <p><em>14h20-14h50</em></p>
 <p><a href="https://www.linkedin.com/in/lauraperrenoud/?originalSubdomain=ch">Laura Perrenoud</a><br>
 Artiste et co-fondatrice, <a href="https://www.int.studio/">Int Studio</a> (CH)</p>
@@ -138,7 +149,7 @@ Cofondateur et associé-gérant, <a href="http://www.digitalkingdom.ch/">Digital
 Responsable des contenus et conservateur des sciences de la nature, <a href="https://www.alimentarium.org/fr">Alimentarium</a> (CH)</p>
 <p>Modération par <a href="https://www.linkedin.com/in/selim-krichane-44313082/">Selim Krichane</a>, Chargé de cours et collaborateur scientifique à l’EPFL et l’UNIL, membre fondateur de l’UNIL – Gamelab (CH)</p>
 <h4 id="Pause-2" tabindex="-1"><em>Pause</em></h4>
-<h4 id="Redefinir-les-limites-du-musee-a-l'ere-numerique" tabindex="-1"><a href="/MuseumXTD%20-%20Red%C3%A9finir%20les%20limites%20du%20mus%C3%A9e%20%C3%A0%20l'%C3%A8re%20num%C3%A9rique/">Redéfinir les limites du musée à l'ère numérique</a></h4>
+<h4 id="Redefinir-les-limites-du-musee-a-l'ere-numerique" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Red%C3%A9finir%20les%20limites%20du%20mus%C3%A9e%20%C3%A0%20l'%C3%A8re%20num%C3%A9rique/">Redéfinir les limites du musée à l'ère numérique</a></h4>
 <p><em>15h20-15h50</em></p>
 <p><a href="https://www.linkedin.com/in/nicolas-henchoz-32ab902/">Nicolas Henchoz</a><br>
 Fondateur et directeur, <a href="https://epfl-ecal-lab.ch/">EPFL+ECAL Lab</a> (CH)</p>
@@ -148,19 +159,19 @@ Directrice des expositions et de la programmation, <a href="https://epfl-pavilio
 Muséographe indépendant (CH)</p>
 <p>Modération par <a href="https://isaacpante.net/">Isaac Pante</a>, Président, Dpt. Sciences du Langage et de l'Information<br>
 Faculté des lettres, UNIL (CH)</p>
-<h4 id="Demystifier-la-transition-numerique" tabindex="-1"><a href="/MuseumXTD%20-%20Giovanni%20Collavizza/">Démystifier la transition numérique</a></h4>
+<h4 id="Demystifier-la-transition-numerique" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Giovanni%20Collavizza/">Démystifier la transition numérique</a></h4>
 <p><em>15h50-16h10</em></p>
 <p><a href="https://www.linkedin.com/in/giovanni-colavizza-850b3342/">Giovanni Colavizza</a><br>
 Co-fondateur d'<a href="https://www.odoma.ch/">Odoma</a> et professeur assistant à l’Université d’Amsterdam (NL)</p>
-<h4 id="Les-defis-de-la-transition-numerique-a-l'aune-de-la-Strategie-numerique-vaudoise" tabindex="-1"><a href="/MuseumXTD%20-%20Catherine%20Pugin/">Les défis de la transition numérique à l’aune de la Stratégie numérique vaudoise</a></h4>
+<h4 id="Les-defis-de-la-transition-numerique-a-l'aune-de-la-Strategie-numerique-vaudoise" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Catherine%20Pugin/">Les défis de la transition numérique à l’aune de la Stratégie numérique vaudoise</a></h4>
 <p><em>16h10-16h30</em></p>
 <p><a href="https://www.linkedin.com/in/catherinepugin/">Catherine Pugin</a><br>
 Déléguée au numérique, <a href="%5Bhttps://www.vd.ch/strategie-numerique-du-canton-de-vaud-digitale-strategie-des-kantons-waadt/%5D(https://www.vd.ch/strategie-numerique-du-canton-de-vaud-digitale-strategie-des-kantons-waadt/)">Canton de Vaud</a> (CH)</p>
-<h4 id="Presentation-de-la-plateforme-MuseumXTD.ch" tabindex="-1"><a href="/MuseumXTD%20-%20Pr%C3%A9sentation%20de%20la%20plateforme%20MuseumXTD.ch/">Présentation de la plateforme MuseumXTD.ch</a></h4>
+<h4 id="Presentation-de-la-plateforme-MuseumXTD.ch" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Pr%C3%A9sentation%20de%20la%20plateforme%20MuseumXTD.ch/">Présentation de la plateforme MuseumXTD.ch</a></h4>
 <p><em>16h30-16h40</em></p>
 <p><a href="https://www.linkedin.com/in/marion-lehembre910/">Marion Lehembre</a><br>
 Cheffe de projet adjointe, <a href="https://www.concilioltd.com/">Concilio Sàrl</a> (CH)</p>
-<h4 id="Conclusion-de-la-premiere-journee" tabindex="-1"><a href="/MuseumXTD%20-%20Conclusion%20de%20la%20premi%C3%A8re%20journ%C3%A9e/">Conclusion de la première journée</a></h4>
+<h4 id="Conclusion-de-la-premiere-journee" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20Conclusion%20de%20la%20premi%C3%A8re%20journ%C3%A9e/">Conclusion de la première journée</a></h4>
 <p><em>16h40-16h50</em></p>
 <p><a href="/Delphine%20Rivier/">Delphine Rivier</a><br>
 Directrice, <a href="http://www.museedartdepully.ch">Musées de Pully</a> (CH)</p>
@@ -181,7 +192,7 @@ Cheffe de projet adjointe, <a href="https://www.concilioltd.com/">Concilio Sàrl
 Directrice, <a href="http://www.museedartdepully.ch">Musées de Pully</a> (CH)</p>
 <p><a href="/St%C3%A9phanie%20Lugon/">Stéphanie Lugon</a><br>
 Conservatrice du projet muséal La Muette, <a href="http://www.museedartdepully.ch">Musées de Pully</a> (CH)</p>
-<h4 id="Mediation-culturelle-et-determinisme-technologique.-Le-smartphone-de-Ramuz" tabindex="-1"><a href="/MuseumXTD%20-%20M%C3%A9diation%20culturelle%20et%20d%C3%A9terminisme%20technologique.%20Le%20smartphone%20de%20Ramuz/">Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz</a></h4>
+<h4 id="Mediation-culturelle-et-determinisme-technologique.-Le-smartphone-de-Ramuz" tabindex="-1"><a href="/Notes/MuseumXTD%20-%20M%C3%A9diation%20culturelle%20et%20d%C3%A9terminisme%20technologique.%20Le%20smartphone%20de%20Ramuz/">Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz</a></h4>
 <p><em>9h20-09h35</em></p>
 <p><a href="https://www.linkedin.com/in/mathieu-menghini-741803155/">Mathieu Menghini</a><br>
 Historien et praticien de l'action et de l'agir culturels et concepteur, <a href="https://lamarmite.org/">La Marmite</a> (CH)</p>
@@ -189,12 +200,12 @@ Historien et praticien de l'action et de l'agir culturels et concepteur, <a href
 <p><em>9h35-09h40</em></p>
 <p><a href="https://www.linkedin.com/in/laurentbolli/">Prof. Laurent Bolli</a><br>
 Directeur de projet, <a href="https://heig-vd.ch/rad/instituts/mei/">Media Engineering Institute de la HEIG-VD</a> (CH)</p>
-<h4 id="Presentation-du-projet-de-l'agence-Computed.by" tabindex="-1"><a href="/Case%20study%20-%20Ramuz%20&amp;%20moi/">Présentation du projet de l'agence Computed.by</a></h4>
+<h4 id="Presentation-du-projet-de-l'agence-Computed.by" tabindex="-1"><a href="/Notes/Case%20study%20-%20Ramuz%20&amp;%20moi/">Présentation du projet de l'agence Computed.by</a></h4>
 <p><em>9h40-09h55</em></p>
 <p>Christophe Guignard<br>
 Gordan Savicic<br>
 <a href="https://www.computedby.com/fr">Agence Computed.by</a> (CH)</p>
-<h4 id="Presentation-du-projet-de-l'agence-Transverse" tabindex="-1"><a href="/Case%20study%20-%20Ramuz%20&amp;%20moi/">Présentation du projet de l'agence Transverse</a></h4>
+<h4 id="Presentation-du-projet-de-l'agence-Transverse" tabindex="-1"><a href="/Notes/Case%20study%20-%20Ramuz%20&amp;%20moi/">Présentation du projet de l'agence Transverse</a></h4>
 <p><em>9h55-10h10</em></p>
 <p>Ingrid Sorg<br>
 Julie Greset<br>
@@ -262,4 +273,9 @@ Yverdon-les-Bains
       </div>
     </footer>
   </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
 </html>
