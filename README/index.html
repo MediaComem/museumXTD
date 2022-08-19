@@ -23,7 +23,7 @@
 <li><a href="#without-obsidian">Without Obsidian</a>
 <ul>
 <li><a href="#running-locally">Running locally</a></li>
-<li><a href="#updating-changes-manually-to-the-live-hosting-server-on-github-pages">Updating changes manually to the live hosting server on github pages</a></li>
+<li><a href="#updating-changes-manually-to-the-live-hosting-server-on-github-pages">Updating changes manually to the live hosting server on GitHub pages</a></li>
 </ul>
 </li>
 </ul>
@@ -32,17 +32,26 @@
 <h3 id="Install-git-for-windows" tabindex="-1">Install git for windows</h3>
 <p>First we need to clone the repository to our local windows machine from GitHub. We do that by installing 'git'. Please go to the <a href="https://gitforwindows.org/">git-for-windows</a> website and follow the simple instructions to install.</p>
 <h3 id="Clone-the-museumXTD-project" tabindex="-1">Clone the museumXTD project</h3>
-<p>Here is the link <em><code>https://github.com/MediaComem/museumXTD.git</code></em> to clone the repo. Simply open a terminal on your windows machine where you want to store the project. For example under the path 'cd C:/Users/enterUserHere/Documents' and run the following command <code>git clone https://github.com/MediaComem/museumXTD.git</code> You will see a new folder called museumXTD which contains all the project files.</p>
+<ol>
+<li>Open a terminal by pressing the <em>windows key</em> and start typing <em>terminal</em>. Select the <strong>terminal</strong> app from the programs list. The Terminal will open under the default location: C:/Users/XXXXX</li>
+<li>Change directory to where you want to store the project. For example under your main documents folder and clone the project. Example below:<pre><code>cd .\Documents\
+git clone https://github.com/MediaComem/museumXTD.git
+</code></pre>
+</li>
+</ol>
+<p>You will see a new folder called <strong>museumXTD</strong> inside of your Documents folder which contains all the project files.</p>
 <h3 id="Install-Obsidian" tabindex="-1">Install Obsidian</h3>
-<p>If you wish to view the projects Markdown files and make changes or add new content you can do this via Obsidian. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool. Once done you can select <strong>Open folder as vault</strong> and select the recently cloned project <strong>museumXTD</strong></p>
+<p>If you wish to view the projects Markdown files and make changes or add new content you can do this via Obsidian. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool. Once done you can select <strong>Open folder as vault</strong> and select the recently cloned project <strong>museumXTD</strong> which was created in your documents folder in the steps above.</p>
 <h3 id="Configuring-Obsidian-to-automatically-sync-with-GitHub-to-pull-latest-changes-and-to-push-new-content" tabindex="-1">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</h3>
-<p>Open the settings tab on Obsidian and under <strong>Community plugins</strong> search for and install the plugin <strong>Obsidian Git</strong>. As you cloned the museumXTD project from GitHub, Obsidian Git will automatically see it as a git project giving you access to its native commands to pull or push changes. Please read the guide material to understand the different settings available to you.</p>
+<p>Open the settings tab on Obsidian and select <strong>Community plugins</strong>. Next turn off safe mode and search for and install the plugin <strong>Obsidian Git</strong>. As you cloned the museumXTD project from GitHub, Obsidian Git will automatically see it as a git project giving you access to its native commands to pull or push changes. Please read the guide material to understand the different settings available to you.</p>
 <h4 id="Some-basic-commands" tabindex="-1">Some basic commands</h4>
 <p>Currently one of the menu items on Obsidian is <strong>Open command palette</strong>. Here you can enter the Obsidian Git commands to save changes and upload them to the GitHub repository.</p>
 <ul>
 <li><strong>Pull</strong> This command is automatically triggered when you open the project with Obsidian. However it is good practice to pull from the repository just before you commit any changes in case there are some other recent changes which you are missing.</li>
+<li><strong>List changed files</strong> Before you commit your changes you can view a list of all the files that have been changed to verify and not to push unwanted changes by mistake.</li>
+<li><strong>Open source control view</strong> If you want to inspect each file change line by line you can use this command to compare before (red) and after (green).</li>
 <li><strong>commit all changes</strong> This command will add your changes to the git staging area and then perform a commit. There is a standard default message attached to the commit. Usually something like <em>vault backup: YYYY-MM-DD hh:mm:ss</em> However I advise to change this to include your name so your team can track in the logs history who is doing what changes. Under <code>Obsidian settings, Community plugins, Obsidian Git, options</code>, here there is the field <em>Commit message on manual backup/commit</em>. You can enter your custom message here that will appear on every commit thereafter.</li>
-<li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few minutes for the changes to take affect on the live server and you may need to clear cache on your browser if the page is already loaded</li>
+<li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few minutes for the changes to take effect on the live server and you may need to clear cache on your browser if the page is already loaded</li>
 </ul>
 <h2 id="Adding-new-MarkDown-files" tabindex="-1">Adding new MarkDown files</h2>
 <ul>
@@ -66,5 +75,5 @@ date: 2022-06-23
 <li><strong>install Node</strong> The official <a href="https://nodejs.org/en/download/">Node-website</a> give instructions on how to install node.</li>
 </ul>
 <p>You can run the project locally by first downloading the required packages <code>npm ci</code> from the package-lock.json and then running <code>npm run start</code>. This will build the project files and store them on the docs folder. Next Eleventy will serve this docs folder on your local host to view on your browser <code>Local: http://localhost:8080</code></p>
-<h2 id="Updating-changes-manually-to-the-live-hosting-server-on-github-pages" tabindex="-1">Updating changes manually to the live hosting server on github pages</h2>
-<p>When you have committed your local changes with git and push to the github branch <strong>test-live</strong>, which has the <strong>eleventy_build.yml</strong> file, this will trigger a build of the project on github and push the created files to the <strong>docs</strong> folder. Next this folder, which will contain the Eleventy build, is pushed to the <strong>gh-pages</strong> branch. This branch will automatically update on the live host in a few moments.</p>
+<h2 id="Updating-changes-manually-to-the-live-hosting-server-on-GitHub-pages" tabindex="-1">Updating changes manually to the live hosting server on GitHub pages</h2>
+<p>When you have committed your local changes with git and push to the GitHub branch <strong>test-live</strong>, which has the <strong>eleventy_build.yml</strong> file, this will trigger a build of the project on GitHub and push the created files to the <strong>docs</strong> folder. Next this folder, which will contain the Eleventy build, is pushed to the <strong>gh-pages</strong> branch. This branch will automatically update on the live host in a few moments.</p>
