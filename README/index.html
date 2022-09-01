@@ -30,7 +30,13 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="Getting-started" tabindex="-1">Getting started</h2>
 <h3 id="Install-git-for-windows" tabindex="-1">Install git for windows</h3>
-<p>First we need to clone the repository to our local windows machine from GitHub. We do that by installing 'git'. Please go to the <a href="https://gitforwindows.org/">git-for-windows</a> website and follow the simple instructions to install.</p>
+<p>First we need to clone the repository to our local windows machine from GitHub. We do that by installing 'git'. Please go to the <a href="https://gitforwindows.org/">git-for-windows</a> website and follow the simple instructions to install. You will need to have your GitHub account added to the repository by the admin to be able to pust new commits.</p>
+<ol>
+<li>Set your git email address and username<pre><code>git config --global user.email &quot;MY_NAME@example.com&quot;
+git config --global user.name &quot;YOUR USER NAME&quot;
+</code></pre>
+</li>
+</ol>
 <h3 id="Clone-the-museumXTD-project" tabindex="-1">Clone the museumXTD project</h3>
 <ol>
 <li>Open a terminal by pressing the <em>windows key</em> and start typing <em>terminal</em>. Select the <strong>terminal</strong> app from the programs list. The Terminal will open under the default location: C:/Users/XXXXX</li>
@@ -50,8 +56,8 @@ git clone https://github.com/MediaComem/museumXTD.git
 <li><strong>Pull</strong> This command is automatically triggered when you open the project with Obsidian. However it is good practice to pull from the repository just before you commit any changes in case there are some other recent changes which you are missing.</li>
 <li><strong>List changed files</strong> Before you commit your changes you can view a list of all the files that have been changed to verify and not to push unwanted changes by mistake.</li>
 <li><strong>Open source control view</strong> If you want to inspect each file change line by line you can use this command to compare before (red) and after (green).</li>
-<li><strong>commit all changes</strong> This command will add your changes to the git staging area and then perform a commit. There is a standard default message attached to the commit. Usually something like <em>vault backup: YYYY-MM-DD hh:mm:ss</em> However I advise to change this to include your name so your team can track in the logs history who is doing what changes. Under <code>Obsidian settings, Community plugins, Obsidian Git, options</code>, here there is the field <em>Commit message on manual backup/commit</em>. You can enter your custom message here that will appear on every commit thereafter.</li>
-<li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few minutes for the changes to take effect on the live server and you may need to clear cache on your browser if the page is already loaded</li>
+<li><strong>commit all changes</strong> This command will add your changes to the git staging area and then perform a commit. There is a standard default message attached to the commit. Usually something like <em>vault backup: YYYY-MM-DD hh:mm:ss</em> However <strong>I advise to change this</strong> to include your name so your team can track in the logs history who is doing what changes. Under <code>Obsidian settings, Community plugins, Obsidian Git, options</code>, here there is the field <em>Commit message on manual backup/commit</em>. You can enter your custom message here that will appear on every commit thereafter.</li>
+<li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few moments for the changes to take effect on the live server and you may need to clear cache on your browser if the page is already loaded. You can also view the website in <em>incognito mode</em> chrome or <em>InPrivate window</em> Edge so not to use any old cookies or cache.</li>
 </ul>
 <h2 id="Adding-new-MarkDown-files" tabindex="-1">Adding new MarkDown files</h2>
 <ul>
@@ -66,7 +72,7 @@ layout: layouts/post.njk
 date: 2022-06-23
 ---
 </code></pre>
-<p>If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
+<p>There is a <strong><a href="http://template.md">template.md</a></strong> file on the root of the project which you can use for creating new markdown Files. If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
 <h3 id="New-images" tabindex="-1">New images</h3>
 <p>All images are to be stored in the root <strong>images</strong> folder. When referencing any image on a MD file please follow this example <code>/images/nameFile.png</code></p>
 <h1 id="Without-Obsidian" tabindex="-1">Without Obsidian</h1>
