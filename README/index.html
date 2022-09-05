@@ -63,16 +63,18 @@ git clone https://github.com/MediaComem/museumXTD.git
 <ul>
 <li><strong>title</strong> This property is referenced in the <em><strong>layouts/base.njk</strong></em> HTML to use as the title to the browser tab. If not set it has the default value as <em>MuseumXTD</em></li>
 <li><strong>layout</strong> We add this to have your MD file contained in some HTML/CSS referenced in a njk file. For this project we have the standard HTML/CSS applied with layouts/post.njk</li>
-<li><strong>date</strong> This property can be included to your front matter to override the default date (file creation) and customize how the file is sorted in a collection. For more info on available formats see <a href="https://www.11ty.dev/docs/dates/">here</a></li>
+<li><strong>tags</strong> For Obsidian you can add this meta data for finding relative documents.</li>
+<li>If you want to add other properties like <strong>date</strong> please add as a comment with the <code>#</code> symbol before it to avoid breaking the build process with invalid formats or data. This has been included in the template.md file as well as below for reference.</li>
 </ul>
 <p>Below is an example of the standard properties to add to your new MD file. post.njk will import the HTML from <code>base.njk</code> which imports the <code>main.css</code> styles to apply to your page.</p>
 <pre><code>---
 title: MuseumXTD
 layout: layouts/post.njk
-date: 2022-06-23
+date: #2022-06-23
+tags: liens forum francais
 ---
 </code></pre>
-<p>There is a <strong><a href="http://template.md">template.md</a></strong> file on the root of the project which you can use for creating new markdown Files. If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
+<p>There is a <strong>template.md</strong> file on the root of the project which you can copy for creating new markdown Files. If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
 <h3 id="New-images" tabindex="-1">New images</h3>
 <p>All images are to be stored in the root <strong>images</strong> folder. When referencing any image on a MD file please follow this example <code>/images/nameFile.png</code></p>
 <h1 id="Without-Obsidian" tabindex="-1">Without Obsidian</h1>
