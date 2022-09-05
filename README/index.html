@@ -70,14 +70,32 @@
 <p><img src="/images/read-me-images/screenshot-repository-page.png" alt="screenshot of github desktop"></p>
 <h3 id="Install-Obsidian" tabindex="-1">Install Obsidian</h3>
 <p>If you wish to view the projects Markdown files and make changes or add new content you can do this via Obsidian. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool. Once done you can select <strong>Open folder as vault</strong> and select the recently cloned project <strong>museumXTD</strong> which was created in your documents folder in the steps above.</p>
-<h4 id="Making-changes" tabindex="-1">Making changes</h4>
+<h2 id="Making-changes" tabindex="-1">Making changes</h2>
 <p>Before making changes make sure you have the latest version of the content.</p>
 <ol>
 <li>In GitHub Desktop check that the current branch is <code>main</code></li>
 <li>Click &quot;Fetch Origin&quot;</li>
+<li>In Obsidian edit the content in the Notes folder. Only files saved to the Notes folder will be published on the website.</li>
 </ol>
 <p><img src="/images/read-me-images/screenshot-github_desktop-branch.png" alt="screenshot of github desktop"></p>
-<p>In Obsidian edit the content in the Notes folder. Only files saved to the Notes folder will be published on the website.</p>
+<h2 id="Adding-new-MarkDown-files" tabindex="-1">Adding new MarkDown files</h2>
+<ul>
+<li><strong>title</strong> This property is referenced in the <em><strong>layouts/base.njk</strong></em> HTML to use as the title to the browser tab. If not set it has the default value as <em>MuseumXTD</em></li>
+<li><strong>layout</strong> We add this to have your MD file contained in some HTML/CSS referenced in a njk file. For this project we have the standard HTML/CSS applied with layouts/post.njk</li>
+<li><strong>tags</strong> For Obsidian you can add this meta data for finding relative documents.</li>
+<li>If you want to add other properties like <strong>date</strong> please add as a comment with the <code>#</code> symbol before it to avoid breaking the build process with invalid formats or data. This has been included in the template.md file as well as below for reference.</li>
+</ul>
+<p>Below is an example of the standard properties to add to your new MD file. post.njk will import the HTML from <code>base.njk</code> which imports the <code>main.css</code> styles to apply to your page.</p>
+<pre><code>---
+title: MuseumXTD
+layout: layouts/post.njk
+date: #2022-06-23
+tags: liens forum francais
+---
+</code></pre>
+<p>There is a <strong>template.md</strong> file on the root of the project which you can copy for creating new markdown Files. If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
+<h3 id="New-images" tabindex="-1">New images</h3>
+<p>All images are to be stored in the root <strong>images</strong> folder. When referencing any image on a MD file please follow this example <code>/images/nameFile.png</code></p>
 <h3 id="Publishing-to-the-website" tabindex="-1">Publishing to the website</h3>
 <p>Open GitHub Desktop</p>
 <ol>
@@ -116,24 +134,6 @@ git clone https://github.com/MediaComem/museumXTD.git
 <li><strong>commit all changes</strong> This command will add your changes to the git staging area and then perform a commit. There is a standard default message attached to the commit. Usually something like <em>vault backup: YYYY-MM-DD hh:mm:ss</em> However <strong>I advise to change this</strong> to include your name so your team can track in the logs history who is doing what changes. Under <code>Obsidian settings, Community plugins, Obsidian Git, options</code>, here there is the field <em>Commit message on manual backup/commit</em>. You can enter your custom message here that will appear on every commit thereafter.</li>
 <li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few moments for the changes to take effect on the live server and you may need to clear cache on your browser if the page is already loaded. You can also view the website in <em>incognito mode</em> chrome or <em>InPrivate window</em> Edge so not to use any old cookies or cache.</li>
 </ul>
-<h2 id="Adding-new-MarkDown-files" tabindex="-1">Adding new MarkDown files</h2>
-<ul>
-<li><strong>title</strong> This property is referenced in the <em><strong>layouts/base.njk</strong></em> HTML to use as the title to the browser tab. If not set it has the default value as <em>MuseumXTD</em></li>
-<li><strong>layout</strong> We add this to have your MD file contained in some HTML/CSS referenced in a njk file. For this project we have the standard HTML/CSS applied with layouts/post.njk</li>
-<li><strong>tags</strong> For Obsidian you can add this meta data for finding relative documents.</li>
-<li>If you want to add other properties like <strong>date</strong> please add as a comment with the <code>#</code> symbol before it to avoid breaking the build process with invalid formats or data. This has been included in the template.md file as well as below for reference.</li>
-</ul>
-<p>Below is an example of the standard properties to add to your new MD file. post.njk will import the HTML from <code>base.njk</code> which imports the <code>main.css</code> styles to apply to your page.</p>
-<pre><code>---
-title: MuseumXTD
-layout: layouts/post.njk
-date: #2022-06-23
-tags: liens forum francais
----
-</code></pre>
-<p>There is a <strong>template.md</strong> file on the root of the project which you can copy for creating new markdown Files. If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
-<h3 id="New-images" tabindex="-1">New images</h3>
-<p>All images are to be stored in the root <strong>images</strong> folder. When referencing any image on a MD file please follow this example <code>/images/nameFile.png</code></p>
 <h1 id="Without-Obsidian" tabindex="-1">Without Obsidian</h1>
 <h2 id="Running-locally" tabindex="-1">Running locally</h2>
 <ul>
