@@ -7,104 +7,110 @@
 <ul>
 <li><a href="#install-the-github-desktop-app">Install the Github Desktop app</a>
 <ul>
-<li><a href="#signing-in">Signing-in</a></li>
+<li><a href="#sign-in">Sign-in</a></li>
 <li><a href="#getting-the-content-onto-your-computer">Getting the content onto your computer</a></li>
 </ul>
 </li>
-<li><a href="#install-obsidian">Install Obsidian</a>
-<ul>
-<li><a href="#making-changes">Making changes</a></li>
+<li><a href="#install-obsidian">Install Obsidian</a></li>
 </ul>
 </li>
+<li><a href="#editing-the-content">Editing the content</a>
+<ul>
+<li><a href="#making-changes">Making changes</a></li>
+<li><a href="#adding-new-pages">Adding new pages</a></li>
+<li><a href="#adding-new-images">Adding new images</a></li>
 <li><a href="#publishing-to-the-website">Publishing to the website</a></li>
 </ul>
 </li>
-<li><a href="#alternative-setup-with-obsidian-git">Alternative setup with Obsidian Git</a>
+<li><a href="#advanced-setup-with-obsidian-git">Advanced setup with Obsidian Git</a>
 <ul>
 <li><a href="#install-git-for-windows">Install git for windows</a></li>
 <li><a href="#clone-the-museumxtd-project">Clone the museumXTD project</a></li>
 <li><a href="#install-obsidian-1">Install Obsidian</a></li>
-<li><a href="#configuring-obsidian-to-automatically-sync-with-github-to-pull-latest-changes-and-to-push-new-content">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</a>
-<ul>
+<li><a href="#configuring-obsidian-to-automatically-sync-with-github-to-pull-latest-changes-and-to-push-new-content">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</a></li>
 <li><a href="#some-basic-commands">Some basic commands</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#adding-new-markdown-files">Adding new MarkDown files</a>
-<ul>
-<li><a href="#new-images">New images</a></li>
-</ul>
-</li>
-<li><a href="#without-obsidian">Without Obsidian</a>
+<li><a href="#developpement-and-design">Developpement and design</a>
 <ul>
 <li><a href="#running-locally">Running locally</a></li>
 <li><a href="#updating-changes-manually-to-the-live-hosting-server-on-github-pages">Updating changes manually to the live hosting server on GitHub pages</a></li>
+<li><a href="#layouts">Layouts</a></li>
 </ul>
 </li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h2 id="Getting-started" tabindex="-1">Getting started</h2>
-<p><strong>The recommanded editing process is as follows:</strong></p>
+<h1 id="Getting-started" tabindex="-1">Getting started</h1>
+<p><strong>What you will need</strong></p>
 <ul>
-<li>Pull the latest version of the website with the GitHub Desktop app</li>
+<li>A <a href="https://github.com/">GitHub</a> account</li>
+<li>Permission to access the repository (send your GitHub user name to <a href="mailto:info@museumxtd.ch">info@museumxtd.ch</a>)</li>
+<li>Obsidian and GitHub Desktop app. See install steps bellow.</li>
+</ul>
+<p><strong>Recommanded editing process</strong></p>
+<ul>
+<li>Fetch the latest version of the website with the GitHub Desktop app</li>
 <li>Edit the files in the Obsidian app</li>
 <li>Push the changes with the GitHub Desktop app</li>
 </ul>
-<p>You will need a GitHub account and permission to access the repository.</p>
-<h3 id="Install-the-Github-Desktop-app" tabindex="-1">Install the Github Desktop app</h3>
-<p>First you will need to clone the repository (the website content) to your personal computer. Go to the <a href="https://desktop.github.com">GitHub Desktop page</a>, download and install the app on your computer.</p>
-<h4 id="Signing-in" tabindex="-1">Signing-in</h4>
-<p>Open GitHub desktop and sign-in with your GitHub account.</p>
+<h2 id="Install-the-Github-Desktop-app" tabindex="-1">Install the Github Desktop app</h2>
+<p>This app will let you download and upload the website's content between GitHub and your computer. Go to the <a href="https://desktop.github.com">GitHub Desktop page</a>, download and install the app on your computer.</p>
+<h3 id="Sign-in" tabindex="-1">Sign-in</h3>
+<p>Open GitHub Desktop and sign-in with your GitHub account.</p>
 <p>Windows: menu File &gt; Options. In the options window, click Accounts and follow the steps to sign in.</p>
 <p>MacOS: menu GitHub Desktop &gt; Preferences. In the preference window, click Accounts and follow the steps to sign in.</p>
-<h4 id="Getting-the-content-onto-your-computer" tabindex="-1">Getting the content onto your computer</h4>
+<h3 id="Getting-the-content-onto-your-computer" tabindex="-1">Getting the content onto your computer</h3>
 <ol>
-<li>Go to the <a href="https://github.com/MediaComem/museumXTD/">MuseumXTD repository page</a></li>
-<li>Click the Clone button</li>
-<li>Copy the URL</li>
-<li>Open the GitHub Desktop app</li>
-<li>Go to menu File &gt; Clone repository. Click on the URL tab and paste in the field named &quot;Repository URL or GitHub username and repository&quot;.</li>
+<li>Go to the <a href="https://github.com/MediaComem/museumXTD/">MuseumXTD GitHub page</a>.</li>
+<li>Click the <strong>Code</strong> button. (screenshot bellow)</li>
+<li>Copy the URL from the pop-up menu.</li>
+<li>Open the GitHub Desktop app (<a href="#sign-in">Sign-in</a> if you didn't already)</li>
+<li>Go to menu File &gt; Clone repository. Click on the URL tab and paste in the field named <em>Repository URL or GitHub username and repository</em>. (screenshot bellow)</li>
+<li>Click the <strong>Clone</strong> button</li>
 </ol>
-<p>You will see a new folder called <strong>museumXTD</strong> inside of your Documents &gt; GitHub folder which contains all the project files.</p>
-<p><img src="/images/read-me-images/screenshot-repository-page.png" alt="screenshot of github desktop"></p>
-<h3 id="Install-Obsidian" tabindex="-1">Install Obsidian</h3>
-<p>If you wish to view the projects Markdown files and make changes or add new content you can do this via Obsidian. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool. Once done you can select <strong>Open folder as vault</strong> and select the recently cloned project <strong>museumXTD</strong> which was created in your documents folder in the steps above.</p>
+<p>GitHub Desktop will create a new folder called <strong>museumXTD</strong> inside of your Documents &gt; GitHub folder which contains all the project files.</p>
+<p><img src="/images/read-me-images/screenshot-repository-page.png" alt="screenshot of the MuseumXTD page on GitHub.com"></p>
+<p><img src="/images/read-me-images/screenshot-GitHub-Desktop-Clone-dialog.png" alt="screenshot of Github Desktop - Clone a repository dialog"></p>
+<h2 id="Install-Obsidian" tabindex="-1">Install Obsidian</h2>
+<p>Obsidian is where you can create pages (notes) and link between them. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool.</p>
+<p>Open Obsidian, and go to menu File &gt; Open vault... then in the window click <strong>Open folder as vault</strong> and select the <strong>museumXTD</strong> folder you created in the steps above (by default in documents &gt; GitHub).</p>
+<p><img src="/images/read-me-images/screenshot-obsidian-open_folder_as_vault.png" alt="screenshot of Obsidian open window dialog"></p>
+<h1 id="Editing-the-content" tabindex="-1">Editing the content</h1>
 <h2 id="Making-changes" tabindex="-1">Making changes</h2>
-<p>Before making changes make sure you have the latest version of the content.</p>
+<p>Before making changes, make sure you have the latest version of the content.</p>
 <ol>
-<li>In GitHub Desktop check that the current branch is <code>main</code></li>
+<li>In GitHub Desktop check that under Current Branch is <code>main</code></li>
 <li>Click &quot;Fetch Origin&quot;</li>
 <li>In Obsidian edit the content in the Notes folder. Only files saved to the Notes folder will be published on the website.</li>
 </ol>
-<p><img src="/images/read-me-images/screenshot-github_desktop-branch.png" alt="screenshot of github desktop"></p>
-<h2 id="Adding-new-MarkDown-files" tabindex="-1">Adding new MarkDown files</h2>
+<p><img src="/images/read-me-images/screenshot-github_desktop-branch.png" alt="screenshot of GitHub Desktop commit window"></p>
+<h2 id="Adding-new-pages" tabindex="-1">Adding new pages</h2>
+<p>In Obsidian create a new note in the Notes folder. For this note to be published to the site you need to add a special section at the top. This will add the menu, layout and colors to the content.</p>
 <ul>
-<li><strong>title</strong> This property is referenced in the <em><strong>layouts/base.njk</strong></em> HTML to use as the title to the browser tab. If not set it has the default value as <em>MuseumXTD</em></li>
-<li><strong>layout</strong> We add this to have your MD file contained in some HTML/CSS referenced in a njk file. For this project we have the standard HTML/CSS applied with layouts/post.njk</li>
-<li><strong>tags</strong> For Obsidian you can add this meta data for finding relative documents.</li>
-<li>If you want to add other properties like <strong>date</strong> please add as a comment with the <code>#</code> symbol before it to avoid breaking the build process with invalid formats or data. This has been included in the template.md file as well as below for reference.</li>
+<li><strong>title</strong> The text that will be displayed in browser tab</li>
+<li><strong>layout</strong> An option to change the style of the webpage, by default use <code>layouts/post.njk</code></li>
+<li><strong>tags</strong> For organising your work in Obsidian and for the website Search function.</li>
 </ul>
-<p>Below is an example of the standard properties to add to your new MD file. post.njk will import the HTML from <code>base.njk</code> which imports the <code>main.css</code> styles to apply to your page.</p>
+<p>Below is an example of the standard header to start a page with.</p>
 <pre><code>---
 title: MuseumXTD
 layout: layouts/post.njk
-date: #2022-06-23
 tags: liens forum francais
 ---
 </code></pre>
-<p>There is a <strong>template.md</strong> file on the root of the project which you can copy for creating new markdown Files. If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
-<h3 id="New-images" tabindex="-1">New images</h3>
+<p>There is a <strong>template.md</strong> file in the museumxtd folder which you can copy for creating new markdown Files.</p>
+<h2 id="Adding-new-images" tabindex="-1">Adding new images</h2>
 <p>All images are to be stored in the root <strong>images</strong> folder. When referencing any image on a MD file please follow this example <code>/images/nameFile.png</code></p>
-<h3 id="Publishing-to-the-website" tabindex="-1">Publishing to the website</h3>
-<p>Open GitHub Desktop</p>
+<h2 id="Publishing-to-the-website" tabindex="-1">Publishing to the website</h2>
+<p>Open the GitHub Desktop app</p>
 <ol>
 <li>Write a summary about your changes</li>
 <li>Click the <em>Commit</em> button</li>
 </ol>
+<p>This last step will upload your changes to GitHub. Once online, your notes will be processed into web pages (from .md to .html). There will be a delay of a few minutes before they are visible online Museumxtd.ch</p>
 <p><img src="/images/read-me-images/screenshot-github_desktop.png" alt="screenshot of github desktop"></p>
-<h2 id="Alternative-setup-with-Obsidian-Git" tabindex="-1">Alternative setup with Obsidian Git</h2>
-<h3 id="Install-git-for-windows" tabindex="-1">Install git for windows</h3>
+<h1 id="Advanced-setup-with-Obsidian-Git" tabindex="-1">Advanced setup with Obsidian Git</h1>
+<h2 id="Install-git-for-windows" tabindex="-1">Install git for windows</h2>
 <p>First we need to clone the repository to our local windows machine from GitHub. We do that by installing 'git'. Please go to the <a href="https://gitforwindows.org/">git-for-windows</a> website and follow the simple instructions to install. You will need to have your GitHub account added to the repository by the admin to be able to pust new commits.</p>
 <ol>
 <li>Set your git email address and username<pre><code>git config --global user.email &quot;MY_NAME@example.com&quot;
@@ -112,7 +118,7 @@ git config --global user.name &quot;YOUR USER NAME&quot;
 </code></pre>
 </li>
 </ol>
-<h3 id="Clone-the-museumXTD-project" tabindex="-1">Clone the museumXTD project</h3>
+<h2 id="Clone-the-museumXTD-project" tabindex="-1">Clone the museumXTD project</h2>
 <ol>
 <li>Open a terminal by pressing the <em>windows key</em> and start typing <em>terminal</em>. Select the <strong>terminal</strong> app from the programs list. The Terminal will open under the default location: C:/Users/XXXXX</li>
 <li>Change directory to where you want to store the project. For example under your main documents folder and clone the project. Example below:<pre><code>cd .\Documents\
@@ -121,11 +127,11 @@ git clone https://github.com/MediaComem/museumXTD.git
 </li>
 </ol>
 <p>You will see a new folder called <strong>museumXTD</strong> inside of your Documents folder which contains all the project files.</p>
-<h3 id="Install-Obsidian-1" tabindex="-1">Install Obsidian</h3>
+<h2 id="Install-Obsidian-1" tabindex="-1">Install Obsidian</h2>
 <p>If you wish to view the projects Markdown files and make changes or add new content you can do this via Obsidian. There are instructions on the <a href="https://obsidian.md/">Obsidian-website</a> on how to install this tool. Once done you can select <strong>Open folder as vault</strong> and select the recently cloned project <strong>museumXTD</strong> which was created in your documents folder in the steps above.</p>
-<h3 id="Configuring-Obsidian-to-automatically-sync-with-GitHub-to-pull-latest-changes-and-to-push-new-content" tabindex="-1">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</h3>
+<h2 id="Configuring-Obsidian-to-automatically-sync-with-GitHub-to-pull-latest-changes-and-to-push-new-content" tabindex="-1">Configuring Obsidian to automatically sync with GitHub to pull latest changes and to push new content</h2>
 <p>Open the settings tab on Obsidian and select <strong>Community plugins</strong>. Next turn off safe mode and search for and install the plugin <strong>Obsidian Git</strong>. As you cloned the museumXTD project from GitHub, Obsidian Git will automatically see it as a git project giving you access to its native commands to pull or push changes. Please read the guide material to understand the different settings available to you.</p>
-<h4 id="Some-basic-commands" tabindex="-1">Some basic commands</h4>
+<h2 id="Some-basic-commands" tabindex="-1">Some basic commands</h2>
 <p>Currently one of the menu items on Obsidian is <strong>Open command palette</strong>. Here you can enter the Obsidian Git commands to save changes and upload them to the GitHub repository.</p>
 <ul>
 <li><strong>Pull</strong> This command is automatically triggered when you open the project with Obsidian. However it is good practice to pull from the repository just before you commit any changes in case there are some other recent changes which you are missing.</li>
@@ -134,7 +140,7 @@ git clone https://github.com/MediaComem/museumXTD.git
 <li><strong>commit all changes</strong> This command will add your changes to the git staging area and then perform a commit. There is a standard default message attached to the commit. Usually something like <em>vault backup: YYYY-MM-DD hh:mm:ss</em> However <strong>I advise to change this</strong> to include your name so your team can track in the logs history who is doing what changes. Under <code>Obsidian settings, Community plugins, Obsidian Git, options</code>, here there is the field <em>Commit message on manual backup/commit</em>. You can enter your custom message here that will appear on every commit thereafter.</li>
 <li><strong>Push</strong> Finally once you made your commit you can push your changes to the GitHub repository. This should trigger a build to publish the new version to GitHub-pages. Note it can take a few moments for the changes to take effect on the live server and you may need to clear cache on your browser if the page is already loaded. You can also view the website in <em>incognito mode</em> chrome or <em>InPrivate window</em> Edge so not to use any old cookies or cache.</li>
 </ul>
-<h1 id="Without-Obsidian" tabindex="-1">Without Obsidian</h1>
+<h1 id="Developpement-and-design" tabindex="-1">Developpement and design</h1>
 <h2 id="Running-locally" tabindex="-1">Running locally</h2>
 <ul>
 <li><strong>install Node</strong> The official <a href="https://nodejs.org/en/download/">Node-website</a> give instructions on how to install node.</li>
@@ -142,3 +148,5 @@ git clone https://github.com/MediaComem/museumXTD.git
 <p>You can run the project locally by first downloading the required packages <code>npm ci</code> from the package-lock.json and then running <code>npm run start</code>. This will build the project files and store them on the docs folder. Next Eleventy will serve this docs folder on your local host to view on your browser <code>Local: http://localhost:8080</code></p>
 <h2 id="Updating-changes-manually-to-the-live-hosting-server-on-GitHub-pages" tabindex="-1">Updating changes manually to the live hosting server on GitHub pages</h2>
 <p>When you have committed your local changes with <code>git add</code> and <code>git commit -m &quot;enter message here&quot;</code> and pushed to the GitHub branch <strong>main</strong> <code>git push origin main</code>, which has the <strong>eleventy_build.yml</strong> file, this will trigger a build of the project on GitHub and push the created files to the <strong>docs</strong> folder. Next this folder, which will contain the Eleventy build, is pushed to the <strong>gh-pages</strong> branch. This branch will automatically update on the live host in a few moments.</p>
+<h2 id="Layouts" tabindex="-1">Layouts</h2>
+<p>If you wish to apply another layout to your MD file you can reference it's file name instead. Be sure to save your new layout file in the right folder <em>layouts</em> and have the correct syntax. Your MD file content will be rendered where you have added the following line `` on your new .njk file</p>
