@@ -6,8 +6,9 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge' />
     <title>Acteurs &amp; Projects</title>
     <link rel='stylesheet' href='/css/main.css' />
-    <script src='https://unpkg.com/lunr/lunr.js'></script>
     <script src='/assets/buildCSVContent.js'></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src='/assets/csvSearch.js'></script>
   </head>
   <body>
     <div class='containerTop'>
@@ -48,37 +49,37 @@ Video - Forum J1:Alexandre Camus: Stratégie numérique des musées cantonaux va
                     <br>
                     <p>La liste de ces actrices et acteurs du changement n&#39;est pas exhaustive. Vous pouvez nous contacter pour ajouter vos projets et références.</p>
                     <div id='tools'>
-                        <input type='search' id='searchActeurs' class='search-bar' placeholder='Recherche'>
+                        <input type='search' id='searchActeurs' class='search-bar' placeholder='Recherche avec plus de trois lettres'>
                         <div id='sort'>
                             <button id='az' onclick='sortCSVData(event, "acteurs","az")' class='sort--segment'>A>Z</button>
                             <button id='sector' onclick='sortCSVData(event, "acteurs","sector")' class='sort--segment'>Secteur</button>
                             <button id='local' onclick='sortCSVData(event,"acteurs","local")' class='sort--segment'>Lieu</button>
                         </div>
-                        <div id='resultsActeurs' class='hidden'>
-                            <h3>Résultats</h3>
-                            <ul>
-                            </ul>
-                        </div>
+                    </div>
+                    <div id='results' class='hidden'>
+                        <h3>Résultats</h3>
+                        <ul id='resultsList'>
+                        </ul>
                         <p id='noResults' class='hidden'> Désolé, aucun résultat n'a été trouvé. </p>
                     </div>
                     <div id='acteursData'></div>
-                </div>
                 </div>
                 <div id='projects' class='tabcontent'>
                     <br>
                     <p>La liste de ces projects</p>
                     <div id='tools'>
-                        <input type='search' id='searchProjects' class='search-bar' placeholder='Recherche'>
+                        <input type='search' id='searchProjects' class='search-bar' placeholder='Recherche avec plus de trois lettres'>
                         <div id='sort'>
                             <button id='az' onclick='sortCSVData(event,"projects","az")' class='sort--segment'>A -> Z</button>
                             <button id='sector' onclick='sortCSVData(event,"projects","sector")' class='sort--segment'>Début du projet</button>
                             <button id='local' onclick='sortCSVData(event,"projects","local")' class='sort--segment'>Lieu</button>
                         </div>
-                        <div id='resultsProjects' class='hidden'>
-                            <h3>Résultats</h3>
-                            <ul>
-                            </ul>
-                        </div>
+                    </div>
+                    <div id='results' class='hidden'>
+                        <h3>Résultats</h3>
+                        <ul id='resultsList'>
+                        </ul>
+                        <p id='noResults' class='hidden'> Désolé, aucun résultat n'a été trouvé. </p>
                     </div>
                     <div id='projectsData'></div>
                 </div>
@@ -100,10 +101,10 @@ Video - Forum J1:Alexandre Camus: Stratégie numérique des musées cantonaux va
             </script>
             <script defer>
                 document.getElementById('searchActeurs').addEventListener('input', (event) => {
-                    searchActeurs(event);
+                    searchCSV('acteurs', event);
                 });
                 document.getElementById('searchProjects').addEventListener('input', (event) => {
-                    searchProjects(event);
+                    searchCSV('projects', event);
                 });
                 
             </script>
