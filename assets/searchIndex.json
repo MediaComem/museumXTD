@@ -110,30 +110,6 @@
 } ,
 
 {
-    "title":"Case study - Covid & questionnement",
-    "url":"/Notes/Case study - Covid & questionnement/",
-    "content":"Mettre documentation"
-} ,
-
-{
-    "title":"Case study - Le projet de transformation",
-    "url":"/Notes/Case study - Le projet de transformation/",
-    "content":"Mettre documentation"
-} ,
-
-{
-    "title":"Case study - Le smartphone de Ramuz",
-    "url":"/Notes/Case study - Le smartphone de Ramuz/",
-    "content":"Mettre documentation"
-} ,
-
-{
-    "title":"Case study - Ramuz & moi",
-    "url":"/Notes/Case study - Ramuz & moi/",
-    "content":"Ramuz &amp; moi Un des objectifs du projet Ramuz est de recueillir et d’exploiter une autre facette du patrimoine, celle de l’histoire orale et de la mémoire personnelle: témoignages, retours de lecture, souvenirs, photographies, travaux divers, etc. et peuvent être de différents formats: fichiers audio, images, textes ou mixtes. Pour cela, des mandats ont été distribués à deux agences, Computed.by et  Transverse, afin de travailler sur le concept d'un dispositif participatif. Christophe Guignard Gordan Savicic Agence Computed.by (CH) Ingrid Sorg Julie Greset Agence Transverse (CH) Retrouver le live du 13 octobre sur notre chaîne YouTube."
-} ,
-
-{
     "title":"Coding Da Vinci",
     "url":"/Notes/Coding Da Vinci/",
     "content":"Lien Brève explication liens"
@@ -596,33 +572,15 @@
 } ,
 
 {
-    "title":"MuseumXTD - Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz",
-    "url":"/Notes/MuseumXTD - Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz/",
-    "content":"Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz Mathieu Menghini Historien &amp; praticien de l'action et de l'agir culturels et concepteur de la La Marmite (CH) Dans le cadre du projet Ramuz, l'association La Marmite a été mandatée afin de développer un dispositif de médiation numérique notamment à partir de la correspondance de l'auteur romand. Par l'entremise de son concepteur, Mathieu Menghini, elle présentera le cadre du projet et ses enjeux. Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
-} ,
-
-{
     "title":"MuseumXTD - Outils numériques, l’éloge de la parcimonie",
     "url":"/Notes/MuseumXTD - Outils numériques, l’éloge de la parcimonie/",
     "content":"Outils numériques, l’éloge de la parcimonie Emmanuelle Giacometti Directrice de l'Espace des Inventions (CH) L’Espace des inventions a pour vocation d’éveiller l’intérêt des enfants et du grand public pour la culture, les sciences et les techniques. Si l’initiation aux techniques numériques et à la robotique fait partie de ses missions, en 2019 son écosystème digital était vieillissant et l’offre en médiation digitale inexistante. Comment cela a-t-il évolué au bénéfice de la crise sanitaire et à quelles fins ? Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
 } ,
 
 {
-    "title":"MuseumXTD - Proposer la création d'un dispositif numérique à des agences créatives",
-    "url":"/Notes/MuseumXTD - Proposer la création d'un dispositif numérique à des agences créatives/",
-    "content":"Proposer la création d'un dispositif numérique à des agences créatives Prof. Laurent Bolli Directeur de projet au Media Engineering Institute de la HEIG-VD (CH) Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
-} ,
-
-{
     "title":"MuseumXTD - Présentation de la plateforme MuseumXTD.ch",
     "url":"/Notes/MuseumXTD - Présentation de la plateforme MuseumXTD.ch/",
     "content":"Présentation de la plateforme MuseumXTD.ch Marion Lehembre Cheffe de projet adjointe, Concilio Sàrl (CH) MuseumXTD.ch est conçue comme une &quot;boîte à outils&quot; destinée aux acteurs de la transition numérique des petits et moyens musées, établis dans la région lémanique et au-delà. Construite à partir du logiciel Obsidian, elle a pour objectif de rassembler toute documentation pertinente sur le sujet, à partir de réflexions, d'exemples et d'outils, produits en Suisse et à l'international. A son lancement en octobre 2022, la plateforme se veut être un prototype disposant d'un nombre minimum de thématiques abordées. A long-terme, elle tendra à être une plateforme de ressources collaborative. Retrouver le live du 12 octobre 2022 sur notre chaîne YouTube. liens forum francais"
-} ,
-
-{
-    "title":"MuseumXTD - Présentation du projet Temps de Jeu VR de l'Archeolab",
-    "url":"/Notes/MuseumXTD - Présentation du projet Temps de Jeu VR de l'Archeolab/",
-    "content":"Temps de jeu: La réalité virtuelle au service de l’histoire vivante Aurèle Cellérier Conservateur à l'ArchéoLab-Villa Romaine, Musées de Pully (CH) Le projet Temps de jeu, soutenu par le fonds FNS Agora pour la communication scientifique, propose aux publics de tous âges un voyage dans les périodes clés du passé régional, du Néolithique jusqu’au Moyen Âge. L’outil numérique du jeu vidéo en réalité virtuelle engage les sens, les émotions et l’intellect pour convier de nouveaux visiteurs à une rencontre intime avec les acteurs et actrices de notre passé, leurs environnements et leurs modes de vie. Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
 } ,
 
 {
@@ -653,6 +611,12 @@
     "title":"MuseumXTD - Tatiana Jullier",
     "url":"/Notes/MuseumXTD - Tatiana Jullier/",
     "content":"Le musée numérique en toute légalité: quelles questions se poser ? Tatiana Jullier Avocate, LALIVE (CH) Qu’il s’agisse de la gestion des collections ou d’innovation relative à l’expérience visiteur, la transition numérique des musées soulève de multiples questions juridiques. Cette présentation en donnera un aperçu et apportera des éléments de réponse afin de permettre la mise en place d’une stratégie numérique réussie. Retrouver le live du 12 octobre 2022 sur notre chaîne YouTube. liens forum francais"
+} ,
+
+{
+    "title":"MuseumXTD - Temps de jeu, la réalité virtuelle au service de l’histoire vivante",
+    "url":"/Notes/MuseumXTD - Temps de jeu, la réalité virtuelle au service de l’histoire vivante/",
+    "content":"Temps de jeu: La réalité virtuelle au service de l’histoire vivante Aurèle Cellérier Conservateur à l'ArchéoLab-Villa Romaine, Musées de Pully (CH) Le projet Temps de jeu, soutenu par le fonds FNS Agora pour la communication scientifique, propose aux publics de tous âges un voyage dans les périodes clés du passé régional, du Néolithique jusqu’au Moyen Âge. L’outil numérique du jeu vidéo en réalité virtuelle engage les sens, les émotions et l’intellect pour convier de nouveaux visiteurs à une rencontre intime avec les acteurs et actrices de notre passé, leurs environnements et leurs modes de vie. Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
 } ,
 
 {
@@ -758,9 +722,27 @@
 } ,
 
 {
+    "title":"Projet Ramuz - Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz",
+    "url":"/Notes/Projet Ramuz - Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz/",
+    "content":"Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz Mathieu Menghini Historien &amp; praticien de l'action et de l'agir culturels et concepteur de la La Marmite (CH) Dans le cadre du projet Ramuz, l'association La Marmite a été mandatée afin de développer un dispositif de médiation numérique notamment à partir de la correspondance de l'auteur romand. Par l'entremise de son concepteur, Mathieu Menghini, elle présentera le cadre du projet et ses enjeux. Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
+} ,
+
+{
+    "title":"Projet Ramuz - Proposer la création d'un dispositif numérique à des agences créatives",
+    "url":"/Notes/Projet Ramuz - Proposer la création d'un dispositif numérique à des agences créatives/",
+    "content":"Proposer la création d'un dispositif numérique à des agences créatives Prof. Laurent Bolli Directeur de projet au Media Engineering Institute de la HEIG-VD (CH) Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum francais"
+} ,
+
+{
     "title":"Projet Ramuz. Présentation de projet de l'agence Computed·By – Coding creative projects",
     "url":"/Notes/Projet Ramuz. Présentation de projet de l'agence Computed·By – Coding creative projects/",
     "content":"Projet Ramuz. Présentation de projet de l'agence Computed·By – Coding creative projects Christophe Guignard Responsable de la relation client, Computed·By – Coding creative projects (CH) Gordan Savicic Designer d'interaction, Computed·By – Coding creative projects (CH) Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum"
+} ,
+
+{
+    "title":"Projet Ramuz. Présentation du cas d’étude des Musées de Pully autour de C. F. Ramuz",
+    "url":"/Notes/Projet Ramuz. Présentation du cas d’étude des Musées de Pully autour de C. F. Ramuz/",
+    "content":"Introduction du projet Ramuz Delphine Rivier Directrice, Musées de Pully (CH) Stéphanie Lugon Conservatrice du projet muséal La Muette, Musées de Pully (CH) Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum"
 } ,
 
 {
@@ -857,6 +839,12 @@
     "title":"Rapports NEMO",
     "url":"/Notes/Rapports NEMO/",
     "content":"NEMO reports on COVID-19 and museums (2020 &amp; 2021). Le Network of European Museum Organisations (NEMO) a publié 3 rapports à partir de 2 enquêtes sur les conséquences de la période de COVID-19 sur les musées, en mettant en évidence le développement de services numériques. A retenir (du rapport 2021)  2 enquêtes auprès de musées européens, à des périodes différentes (mars et avril 2020 ainsi que octobre et novembre 2020). Quelques chiffres intéressants, dont:  La majorité des grands musées (81%) ont augmenté leurs capacités numériques à la suite de la pandémie de COVID-19, alors que seulement 47% des petits musées ont indiqué l'avoir fait. 80% des musées interrogés pensent avoir besoin d'un soutien supplémentaire pour apprendre à mieux maîtriser outils et pratiques numériques. Parmi ces musées, 40%  répondent avoir besoin de conseil pour construire leur stratégie numérique. Les offres numériques les plus populaires auprès des publics en ligne depuis le début de la pandémie de COVID-19 ont été les activités de médias sociaux, que près de 60 % des musées ayant répondu ont déclaré être plus populaires qu'avant, suivies par le contenu vidéo (42 %) et les visites virtuelles (28 %).   Des recommandations, notamment sur le développement et le soutien de services digitaux (p.6) :  la nécessité d'un soutien continu. le besoin spécifique des musées de petites et moyennes tailles. la nécessité d'élaborer des mesures, des cadres et des méthodes solides pour suivre les activités numériques.    Retrouvez plus de ressources du NEMO sur cette page. Apparaît dans Quel est l'impact du COVID-19 sur la numérisation des musées, Comment évaluer un projet numérique Vous n'êtes pas d'accord avec nous ou vous pensez pouvoir compléter cette note? N'hésitez pas à nous contacter à l'adresse suivante: info@museumxtd.ch liens"
+} ,
+
+{
+    "title":"Retours d'expérience des petits et moyens musées vaudois sur leur projet de transformation",
+    "url":"/Notes/Retours d'expérience des petits et moyens musées vaudois sur leur projet de transformation/",
+    "content":"Retours d'expérience des petits et moyens musées vaudois sur leur projet de transformation Le projet Ramuz. Cas d’étude des Musées de Pully autour de C. F. Ramuz MuseumXTD - Outils numériques, l’éloge de la parcimonie MuseumXTD - Villa « Le Lac » 2.0, quand le voyage dans le temps devient une réalité MuseumXTD - Déploiement numérique de l’offre au public, enjeux d’un projet global MuseumXTD - Un temps pour la rematérialisation MuseumXTD - Temps de jeu, la réalité virtuelle au service de l’histoire vivante Retrouver le live du 13 octobre 2022 sur notre chaîne YouTube. liens forum"
 } ,
 
 {
