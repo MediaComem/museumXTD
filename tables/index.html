@@ -6,9 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge' />
     <title>Acteurs &amp; Projets</title>
     <link rel='stylesheet' href='/css/main.css' />
-    <script src='/assets/buildCSVContent.js'></script>
     <script src="https://unpkg.com/lunr/lunr.js"></script>
-    <script src='/assets/csvSearch.js'></script>
   </head>
   <body>
     <div class='containerTop'>
@@ -67,17 +65,12 @@
                     <div id='tools'>
                         <input type='search' id='searchActeurs' class='search-bar' placeholder='Recherche avec plus de trois lettres'>
                         <div id='sort'>
-                            <button id='az' onclick='sortCSVData(event, "acteurs","az")' class='sort--segment'>A>Z</button>
-                            <button id='sector' onclick='sortCSVData(event, "acteurs","Type")' class='sort--segment'>Type</button>
-                            <button id='local' onclick='sortCSVData(event,"acteurs","local")' class='sort--segment'>Lieu</button>
+                            <button id='acteursAZ' class='sort--segment'>A>Z</button>
+                            <button id='acteursSector' class='sort--segment'>Type</button>
+                            <button id='acteursLocal' class='sort--segment'>Lieu</button>
                         </div>
                     </div>
-                    <div id='results' class='hidden'>
-                        <h3>Résultats</h3>
-                        <ul id='resultsList'>
-                        </ul>
-                        <p id='noResults' class='hidden'> Désolé, aucun résultat n'a été trouvé. </p>
-                    </div>
+                    <p id='noResults' class='hidden'> Désolé, aucun résultat n'a été trouvé. </p>
                     <div id='acteursData'></div>
                 </div>
                 <div id='projects' class='tabcontent'>
@@ -86,17 +79,12 @@
                     <div id='tools'>
                         <input type='search' id='searchProjects' class='search-bar' placeholder='Recherche avec plus de trois lettres'>
                         <div id='sort'>
-                            <button id='az' onclick='sortCSVData(event,"projects","az")' class='sort--segment'>A>Z</button>
-                            <button id='sector' onclick='sortCSVData(event,"projects","Type")' class='sort--segment'>Date</button>
-                            <button id='local' onclick='sortCSVData(event,"projects","local")' class='sort--segment'>Lieu</button>
+                            <button id='projectsAZ' class='sort--segment'>A>Z</button>
+                            <button id='projectsSector' class='sort--segment'>Date</button>
+                            <button id='projectsLocal' class='sort--segment'>Lieu</button>
                         </div>
                     </div>
-                    <div id='results' class='hidden'>
-                        <h3>Résultats</h3>
-                        <ul id='resultsList'>
-                        </ul>
-                        <p id='noResults' class='hidden'> Désolé, aucun résultat n'a été trouvé. </p>
-                    </div>
+                    <p id='noResults' class='hidden'> Désolé, aucun résultat n'a été trouvé. </p>
                     <div id='projectsData'></div>
                 </div>
             </div>
@@ -115,15 +103,7 @@
                     evt.currentTarget.className += ' active';
                 }
             </script>
-            <script defer>
-                document.getElementById('searchActeurs').addEventListener('input', (event) => {
-                    searchCSV('acteurs', event);
-                });
-                document.getElementById('searchProjects').addEventListener('input', (event) => {
-                    searchCSV('projects', event);
-                });
-                
-            </script>
+            <script type="module" src='/assets/csvSearch.js'></script>
 		</div>
 	</div>
 </div>
