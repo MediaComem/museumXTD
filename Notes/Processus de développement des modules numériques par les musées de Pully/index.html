@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MuseumXTD</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
+
+  </head>
+  <body>
+    <div class="containerTop">
+      <div id="masthead">
+        M u s e u m X T D
+      </div>
+      <!-- topbar Menu -->
+      <nav id="site-nav" role="navigation">
+        <div id="menuToggle"> 
+          <!--
+          hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input id="toggle" name="toggle" type="checkbox" />
+          <label id="toggle-label" for="toggle">
+            <span>menu</span>
+          </label>
+
+          <div id="menu-mobile" >
+            <div class="navMenu" >
+
+              <a class="menuitem" href='/'>Accueil</a>
+              <a class="menuitem" href='/Navigation/Numérique et musée/'>Numérique & Musée</a>
+              <a class="menuitem" href="/Navigation/Le projet Ramuz. Cas d’étude des Musées de Pully autour de C. F. Ramuz">Projet Ramuz</a>
+              <a class="menuitem" href='/tables/'>Acteurs & Projets</a>
+              <a class="menuitem" href='/Navigation/Forum/'>Forum</a>
+              <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
+              <a class="menuitem" href='/Navigation/Search/'>Rechercher</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br>
+<br>
+<br>
+<div class='layout-post main-container'>
+	<div class='centered'>
+		<div class='column'>
+			<div class='ui basic segment'>
+				<h2 id="Processus-de-developpement-des-modules-numeriques-par-les-musees-de-Pully" tabindex="-1">Processus de développement des modules numériques par les musées de Pully</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">Intervenants</th>
+<th style="text-align:left">Objectifs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Phase 1.</strong> <br>Intention initiale</td>
+<td style="text-align:left">Direction et cheffe de projet</td>
+<td style="text-align:left">Etablir l'intention fondamentale (alignement PSC) <br> Constituer une équipe de projet transdisciplinaire</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 2.</strong> <br>Définition du brief</td>
+<td style="text-align:left">Cheffe de projet et équipe du projet (ingénieure des médias, médiatrice, médiatrice inclusion, conservatrice/scientifique, etc. selon nature du projet)</td>
+<td style="text-align:left">Fonctionner en intelligence collective (session menée de brainstorm) pour faire émerger le brief (objectifs, consignes et livrables attendus)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 3.</strong> <br>Remise du brief</td>
+<td style="text-align:left">Cheffe de projet et prestataire conception</td>
+<td style="text-align:left">Présentation du brief et travail en commun pour s’accorder sur les termes, apporter des précisions, réactualiser</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 4.</strong> <br>Concept</td>
+<td style="text-align:left">Prestataire conception et équipe de projet</td>
+<td style="text-align:left">Concept présenté à l’équipe de projet, affinage si nécessaire</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 5.</strong> <br>Mise en œuvre médiation</td>
+<td style="text-align:left">Médiatrice/médiatrice inclusion (consultante externe ou équipe musées)</td>
+<td style="text-align:left">Développement de l’articulation physique/numérique</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 6.</strong> <br>Développement technique</td>
+<td style="text-align:left">Prestataire technique</td>
+<td style="text-align:left">Production du dispositif numérique</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 7.</strong> <br>Contenu</td>
+<td style="text-align:left">Chercheuse externe ou équipe musées</td>
+<td style="text-align:left">Sélection du contenu pour remplir le module numérique</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Phase 8.</strong> <br>Faire vivre le projet</td>
+<td style="text-align:left">Cheffe de projet à l’équipe du musée</td>
+<td style="text-align:left">Passage du projet à la mise en œuvre dans le quotidien du musée</td>
+</tr>
+</tbody>
+</table>
+<p>De la phase 2 à la phase 7, organiser des sessions de feedback participatifs de potentiels utilisateurs pour challenger le projet.</p>
+<p>Apparaît dans <a href="/Navigation/Le%20projet%20Ramuz.%20Cas%20d%E2%80%99%C3%A9tude%20des%20Mus%C3%A9es%20de%20Pully%20autour%20de%20C.%20F.%20Ramuz/">Le projet Ramuz. Cas d’étude des Musées de Pully autour de C. F. Ramuz</a></p>
+
+			</div>
+		</div>
+	</div>
+</div>
+    <footer>
+      <div id="mastfoot">
+        M u s e u m X T D
+      </div>
+    </footer>
+    <div id="footer-padding"></div>
+  </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
+</html>
