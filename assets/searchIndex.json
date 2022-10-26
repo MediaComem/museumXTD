@@ -878,6 +878,12 @@
 } ,
 
 {
+    "title":"Tableau Acteurs et Projets",
+    "url":"/Notes/Tableau Acteurs et Projets/",
+    "content":"Cette note fournit un mode d'emploi pour ajouter/enlever/modifier des valeurs dans les tableaux Acteurs et Projets, qui apparaît sur la plateforme museumxtd dans Acteurs&amp;Projets. Avant de modifier  S'assurer d'avoir les accès pour modifier le site internet MuseumXTD.ch Voir l'étape README#Getting started. S'assurer d'avoir compris le processus: les modifications des tableaux suivent les mêmes règles que les modifications des contenus depuis Obsidian:  PUSH: avant de faire n'importe quelle modification sur les tableaux, il faut s'assurer d'être à jour. Voir README#Making changes COMMIT&amp;PUSH: après ses modifications, il faut pouvoir les rendre accessible aux autres utilisateurs. Voir README#Publishing to the website   Télécharger le logiciel libre Libre Office. Ce dernier a été choisi pour un soucis de formatage et d'accès.  Cliquer ici pour télécharger Cliquer ici pour installer    Modifier  Ouvrir les documents à modifier  Aller dans le dossier local museumxtd &gt; _ data Ouvrir avec LibreOffice (clique droit &gt; Ouvrir avec &gt; LibreOffice)   Modifier les documents  /!\ Ne pas modifier la première ligne Ajouter/enlever/modifier les valeurs en remplissant idéalement toutes les colonnes Enregistrer Sous &gt; remplacer le document existant SOUS FORMAT .ODF et non format .CSV !Pasted image 20221026120839.png    Après avoir modifié  COMMIT&amp;PUSH: après ses modifications, il faut pouvoir les rendre accessible aux autres utilisateurs. Voir README#Publishing to the website"
+} ,
+
+{
     "title":"Tate - Archives and access toolkit",
     "url":"/Notes/Tate - Archives and access toolkit/",
     "content":"Archives and Access toolkit - Tate 2012-2017 Information, recommendations and guidance on developing archive digitisation and associated outreach projects  [Funding and managing an archive digitisation project](Funding and managing an archive digitisation project | Tate) [Designing an archive digitisation project](Designing an archive digitisation project | Tate) Publishing archive collections online [Supporting learning and participation with archives](Supporting learning and participation with archives | Tate)  La Tate a numérisé une partie de ses collections et développe une stratégie de contenu - cf sa [chaîne YouTube](Tate - YouTube.  documentent leurs projets (cf Collection Care Research Writings ou Tate Papers) liens numerisationcollection"
@@ -917,6 +923,12 @@
     "title":"Tips for Digitizing Your Art Collection Easily & Cost Effectively",
     "url":"/Notes/Tips for Digitizing Your Art Collection Easily & Cost Effectively/",
     "content":"Artwork Archive. Tips for Digitizing Your Art Collection Easily &amp; Cost Effectively Artwork Archive fournit une liste de conseils pour numériser ses collections avec peu de moyens. A retenir  Ce que la numérisation des collections apporte à un musée et ses publics. Une liste d'étapes pour numériser ses collections, en les photographiant, sans avoir de compétences techniques. Des liens vers d'autres conseils pour approfondir le sujet (Tip #8).  Artwork Archive fournit plusieurs outils pour gérer, préserver et présenter ses collections d'art. Apparaît dans Comment créer et valoriser une collection numérique Vous n'êtes pas d'accord avec nous ou vous pensez pouvoir compléter cette note? N'hésitez pas à nous contacter à l'adresse suivante: info@museumxtd.ch liens"
+} ,
+
+{
+    "title":"To-do",
+    "url":"/Notes/To-do/",
+    "content":"[ ] Uniformiser la documentation pour un utilisateur externe (persona = Nathalie)  [ ] Uniformisation de la langue utilisée  [ ] Traduire le ReadME en français [ ] Garder/prévoir une documentation en anglais ?   [ ] Simplification de l'entrée (utilisation d'un seul logiciel idéalement, et ce pendant tout le process) [ ] Simplification de l'emplacement de la documentation : aujourd'hui, deux folders sont utilisés (Comment participer sur la plateforme et le README) [ ] Prévoir des modèles de note"
 } ,
 
 {

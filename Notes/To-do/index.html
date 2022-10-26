@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MuseumXTD</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
+
+  </head>
+  <body>
+    <div class="containerTop">
+      <div id="masthead">
+        M u s e u m X T D
+      </div>
+      <!-- topbar Menu -->
+      <nav id="site-nav" role="navigation">
+        <div id="menuToggle"> 
+          <!--
+          hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input id="toggle" name="toggle" type="checkbox" />
+          <label id="toggle-label" for="toggle">
+            <span>menu</span>
+          </label>
+
+          <div id="menu-mobile" >
+            <div class="navMenu" >
+
+              <a class="menuitem" href='/'>Accueil</a>
+              <a class="menuitem" href='/Navigation/Numérique et musée/'>Numérique & Musée</a>
+              <a class="menuitem" href="/Navigation/Le projet Ramuz. Cas d’étude des Musées de Pully autour de C. F. Ramuz">Projet Ramuz</a>
+              <a class="menuitem" href='/tables/'>Acteurs & Projets</a>
+              <a class="menuitem" href='/Navigation/Forum/'>Forum</a>
+              <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
+              <a class="menuitem" href='/Navigation/Search/'>Rechercher</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br>
+<br>
+<br>
+<div class='layout-post main-container'>
+	<div class='centered'>
+		<div class='column'>
+			<div class='ui basic segment'>
+				<ul>
+<li>[ ] Uniformiser la documentation pour un utilisateur <em>externe</em> (persona = Nathalie)
+<ul>
+<li>[ ] Uniformisation de la langue utilisée
+<ul>
+<li>[ ] Traduire le ReadME en français</li>
+<li>[ ] Garder/prévoir une documentation en anglais ?</li>
+</ul>
+</li>
+<li>[ ] Simplification de l'entrée (utilisation d'un seul logiciel idéalement, et ce pendant tout le process)</li>
+<li>[ ] Simplification de l'emplacement de la documentation : aujourd'hui, deux folders sont utilisés (Comment participer sur la plateforme et le README)</li>
+<li>[ ] Prévoir des modèles de note</li>
+</ul>
+</li>
+</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+    <footer>
+      <div id="mastfoot">
+        M u s e u m X T D
+      </div>
+    </footer>
+    <div id="footer-padding"></div>
+  </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
+</html>
