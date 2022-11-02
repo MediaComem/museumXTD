@@ -1,4 +1,55 @@
-<p>Cette note fournit un mode d'emploi pour ajouter/enlever/modifier des valeurs dans les tableaux <em>Acteurs</em> et <em>Projets</em>, qui apparaît sur la plateforme museumxtd dans <a href="https://www.museumxtd.ch/tables/">Acteurs&amp;Projets</a>.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MuseumXTD</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/assets/search.js" defer></script>
+
+  </head>
+  <body>
+    <div class="containerTop">
+      <div id="masthead">
+        M u s e u m X T D
+      </div>
+      <!-- topbar Menu -->
+      <nav id="site-nav" role="navigation">
+        <div id="menuToggle"> 
+          <!--
+          hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input id="toggle" name="toggle" type="checkbox" />
+          <label id="toggle-label" for="toggle">
+            <span>menu</span>
+          </label>
+
+          <div id="menu-mobile" >
+            <div class="navMenu" >
+
+              <a class="menuitem" href='/'>Accueil</a>
+              <a class="menuitem" href='/Navigation/Numérique et musée/'>Numérique & Musée</a>
+              <a class="menuitem" href="/Navigation/Le projet Ramuz. Cas d’étude des Musées de Pully autour de C. F. Ramuz">Projet Ramuz</a>
+              <a class="menuitem" href='/tables/'>Acteurs & Projets</a>
+              <a class="menuitem" href='/Navigation/Forum/'>Forum</a>
+              <a class="menuitem" href='/Navigation/A propos/'>À propos</a>
+              <a class="menuitem" href='/Navigation/Search/'>Rechercher</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br>
+<br>
+<br>
+<div class='layout-post main-container'>
+	<div class='centered'>
+		<div class='column'>
+			<div class='ui basic segment'>
+				<p>Cette note fournit un mode d'emploi pour ajouter/enlever/modifier des valeurs dans les tableaux <em>Acteurs</em> et <em>Projets</em>, qui apparaît sur la plateforme museumxtd dans <a href="https://www.museumxtd.ch/tables/">Acteurs&amp;Projets</a>.</p>
 <h2 id="Avant-de-modifier" tabindex="-1">Avant de modifier</h2>
 <ol>
 <li>S'assurer d'avoir les accès pour modifier le site internet <a href="https://www.museumxtd.ch">MuseumXTD.ch</a> Voir l'étape <a href="#READMEGetting-started">README#Getting started</a>.</li>
@@ -37,3 +88,21 @@
 <li>COMMIT&amp;PUSH: après ses modifications, il faut pouvoir les rendre accessible aux autres utilisateurs. Voir <a href="#READMEPublishing-to-the-website">README#Publishing to the website</a></li>
 <li>Les modifications se vérifient depuis l'interface GitHub Desktop, dans <em>History</em>.</li>
 </ol>
+
+			</div>
+		</div>
+	</div>
+</div>
+    <footer>
+      <div id="mastfoot">
+        M u s e u m X T D
+      </div>
+    </footer>
+    <div id="footer-padding"></div>
+  </body>
+  <script defer>
+    document.getElementById('searchString').addEventListener('input', (event) => {
+      search();
+    });
+  </script>
+</html>
