@@ -51,6 +51,16 @@
         </div>
       </nav>
     </div>
+    <div id="breadCrumbs">
+      
+        
+        
+          <a class="crumb" href="/">home</a>
+          ...
+        
+      
+    </div>
+
     <br>
 <br>
 <br>
@@ -100,8 +110,11 @@
     <div id="footer-padding"></div>
   </body>
   <script defer>
-    document.getElementById('searchString').addEventListener('input', (event) => {
-      search();
-    });
+    const searchElement = document.getElementById('searchString')
+    if (searchElement) {
+      searchElement.addEventListener('input', (event) => {
+        search();
+      });
+    }
   </script>
 </html>

@@ -51,6 +51,10 @@
         </div>
       </nav>
     </div>
+    <div id="breadCrumbs">
+      
+    </div>
+
     <br>
 <br>
 <br>
@@ -90,8 +94,11 @@ Le Network of European Museum Organisations (NEMO) a publié 3 rapports à parti
     <div id="footer-padding"></div>
   </body>
   <script defer>
-    document.getElementById('searchString').addEventListener('input', (event) => {
-      search();
-    });
+    const searchElement = document.getElementById('searchString')
+    if (searchElement) {
+      searchElement.addEventListener('input', (event) => {
+        search();
+      });
+    }
   </script>
 </html>

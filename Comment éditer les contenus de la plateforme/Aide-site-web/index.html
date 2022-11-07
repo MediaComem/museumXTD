@@ -51,6 +51,10 @@
         </div>
       </nav>
     </div>
+    <div id="breadCrumbs">
+      
+    </div>
+
     <br>
 <br>
 <br>
@@ -85,8 +89,11 @@ Bold pour un bouton plein</p>
     <div id="footer-padding"></div>
   </body>
   <script defer>
-    document.getElementById('searchString').addEventListener('input', (event) => {
-      search();
-    });
+    const searchElement = document.getElementById('searchString')
+    if (searchElement) {
+      searchElement.addEventListener('input', (event) => {
+        search();
+      });
+    }
   </script>
 </html>

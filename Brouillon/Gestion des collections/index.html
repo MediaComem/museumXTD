@@ -51,6 +51,10 @@
         </div>
       </nav>
     </div>
+    <div id="breadCrumbs">
+      
+    </div>
+
     <br>
 <br>
 <br>
@@ -101,8 +105,11 @@ Dans cette perspective, le <a href="https://www.canada.ca/fr/reseau-information-
     <div id="footer-padding"></div>
   </body>
   <script defer>
-    document.getElementById('searchString').addEventListener('input', (event) => {
-      search();
-    });
+    const searchElement = document.getElementById('searchString')
+    if (searchElement) {
+      searchElement.addEventListener('input', (event) => {
+        search();
+      });
+    }
   </script>
 </html>

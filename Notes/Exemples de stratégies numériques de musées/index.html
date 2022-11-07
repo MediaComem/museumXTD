@@ -51,6 +51,10 @@
         </div>
       </nav>
     </div>
+    <div id="breadCrumbs">
+      
+    </div>
+
     <br>
 <br>
 <br>
@@ -93,8 +97,11 @@ L'agence Cogapp propose une liste de quelques documents de stratégie numérique
     <div id="footer-padding"></div>
   </body>
   <script defer>
-    document.getElementById('searchString').addEventListener('input', (event) => {
-      search();
-    });
+    const searchElement = document.getElementById('searchString')
+    if (searchElement) {
+      searchElement.addEventListener('input', (event) => {
+        search();
+      });
+    }
   </script>
 </html>
