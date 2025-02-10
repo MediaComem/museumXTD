@@ -2,7 +2,7 @@ const fs = require("fs")
 const path = require("path")
 const {parse} = require('csv-parse/sync');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
 let avoid=['.eleventy.js','.git','.gitignore','.obsidian','assets','css','docs','node_modules','tables','_data','_includes','package.json','package-lock.json'];
 
 const getAllFiles = function(dirPath, arrayOfFiles) {
@@ -71,10 +71,13 @@ function readCSV(name) {
   }
 }
 
-module.exports = config => {
+module.exports = async function (config) {
+  const { EleventyRenderPlugin } = await import("@11ty/eleventy");
   config.watchIgnores.add(".trash/**");
   config.watchIgnores.add("Brouillon/**");
   config.watchIgnores.add("Comment éditer les contenus de la plateforme/**");
+
+  config.addPlugin(ejsPlugin);
   // add NavigationPlugin for breadcrumbs links
   config.addPlugin(NavigationPlugin);
   // add 11ty render function to use in njk files
