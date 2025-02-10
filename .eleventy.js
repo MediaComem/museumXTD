@@ -72,9 +72,9 @@ function readCSV(name) {
 }
 
 module.exports = config => {
-  config.ignores.add(".trash/**");
-  config.ignores.add("Brouillon/**");
-  config.ignores.add("Comment éditer les contenus de la plateforme/**");
+  config.watchIgnores.add(".trash/**");
+  config.watchIgnores.add("Brouillon/**");
+  config.watchIgnores.add("Comment éditer les contenus de la plateforme/**");
   // add NavigationPlugin for breadcrumbs links
   config.addPlugin(NavigationPlugin);
   // add 11ty render function to use in njk files
