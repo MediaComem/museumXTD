@@ -3,6 +3,7 @@ const path = require("path")
 const {parse} = require('csv-parse/sync');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
+
 let avoid=['.eleventy.js','.git','.gitignore','.obsidian','assets','css','docs','node_modules','tables','_data','_includes','package.json','package-lock.json'];
 
 const getAllFiles = function(dirPath, arrayOfFiles) {
@@ -136,10 +137,10 @@ module.exports = async function (config) {
     linkify: true
   };
 
-  const slugify = require("slugify");
+  const slugify = config.getFilter("slugify");
 
   let markdownLib = markdownIt(markdownItOptions)
-    .use(require('markdown-it-anchor'), {slugify});
+    .use(require('markdown-it-anchor'), { slugify });
   markdownLib.linkify.add("[[", {
     validate: /^\s?([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s?\]\]/,
     normalize: match => {
