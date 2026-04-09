@@ -1,6 +1,6 @@
 {
-  "theme": "moonstone",
-  "cssTheme": "Atom",
+  "theme": "obsidian",
+  "cssTheme": "",
   "translucency": false,
   "baseFontSize": 15,
   "accentColor": ""
