@@ -121,7 +121,6 @@ Cécile Demaurex
 - Nicolas Henchoz
 - Christian Hunziker
 - Solène Jimenez
-- Tatiana Jullier
 - Stéphane Kläfiger
 - Selim Krichane
 - Mathieu Menghini

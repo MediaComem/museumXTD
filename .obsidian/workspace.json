@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Concevoir l'expérience visiteur.md",
+                "file": "Notes/Quel cadre légal pour la transformation numérique.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Concevoir l'expérience visiteur"
+              "title": "Quel cadre légal pour la transformation numérique"
             }
           }
         ],
@@ -248,8 +248,16 @@
   },
   "active": "7011e3dfa9cd3612",
   "lastOpenFiles": [
-    "Notes/MuseumXTD - Tatiana Jullier.md",
+    "Notes/Quelles sont les compétences numériques à acquérir et à développer en interne.md",
+    "Notes/Programme et intervenants J1.md",
+    "Notes/Projet Ramuz - Médiation culturelle et déterminisme technologique. Le smartphone de Ramuz.md",
+    "Notes/Programme et intervenants J2.md",
+    "Notes/Organisation.md",
+    "Navigation/Forum 2022.md",
+    "Comment éditer les contenus de la plateforme/Tags.md",
+    "Comment éditer les contenus de la plateforme/Syntaxe & typologie.md",
     "Notes/Concevoir l'expérience visiteur.md",
+    "Notes/MuseumXTD - Tatiana Jullier.md",
     "Notes/Museum Innovation Barometer.md",
     "Notes/Les outils numériques du marketing et de la communication.md",
     "Notes/Enquête sur la digitalisation des musées de Suisse romande, vers une virtualisation de la culture.md",
@@ -257,7 +265,6 @@
     "Notes/Comment évaluer un projet numérique.md",
     "Notes/Quels sont les opportunités et les freins.md",
     "Notes/Comprendre la transformation numérique.md",
-    "Comment éditer les contenus de la plateforme/Syntaxe & typologie.md",
     "Comment éditer les contenus de la plateforme/Aide-site-web.md",
     "Comment éditer les contenus de la plateforme/Notes question et ressource.md",
     "Notes/Newsletters.md",
@@ -266,7 +273,6 @@
     "Notes/Comment mener un projet numérique.md",
     "Notes/Qu'est-ce qu'une stratégie numérique.md",
     "Navigation/footer.md",
-    "Navigation/A propos.md",
-    "Notes/Exemples d’expositions en ligne de collections patrimoniales.md"
+    "Navigation/A propos.md"
   ]
 }

@@ -30,10 +30,6 @@ Modération de la journée par [Zelda Chauvet](https://www.linkedin.com/in/zelda
 - [Solène Jimenez](https://www.linkedin.com/in/soljim/), Directrice du développement international, [Arenametrix](https://arenametrix.com/) (FR)
 
 
-- #### [[MuseumXTD - Tatiana Jullier|Le musée numérique en toute légalité: quelles questions se poser ?]]
-- [Tatiana Jullier](https://www.linkedin.com/in/tatiana-jullier-53918b209/?originalSubdomain=ch), Avocate, [LALIVE](https://www.lalive.law/) (CH) 
-
-
 - #### [[MuseumXTD - Le projet DOORS|DOORS: Digital Incubator for Museums]] (online)
 - [Ana Maria Carabelea](https://www.linkedin.com/in/ana-carabelea/), pour [Ars Electronica](https://ars.electronica.art/news/en/) (AT), [MUSEUM BOOSTER](https://museumbooster.com/) (AT) et [Ecsite](https://www.ecsite.eu/) (BE)
 
